@@ -2,7 +2,8 @@ module.exports = {
   apps: [
     {
       name: "lol-next",
-      script: "yarn start"
+      script: "yarn",
+      args: "start"
     }
   ],
   deploy: {
