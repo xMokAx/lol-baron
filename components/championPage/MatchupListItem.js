@@ -53,16 +53,16 @@ class MatchupListItem extends Component {
         >
           <td>
             <div className="is-flex flex-align-center">
+              <ChampImage
+                className="image is-40x40 mgr-s"
+                champ={enemy}
+                tooltip={true}
+              />
               <Link
                 href={`/champion?elo=${selectedElo}&champName=${enemyName}&role=${role}`}
                 as={`/champion/${selectedElo}/${enemyName}/${role}`}
               >
                 <a className="has-text-primary is-flex flex-align-center matchup-enemy">
-                  <ChampImage
-                    className="image is-40x40 mgr-s"
-                    champ={enemy}
-                    tooltip={true}
-                  />
                   <p className="text-overflow">{enemy.gameName}</p>
                 </a>
               </Link>

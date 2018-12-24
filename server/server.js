@@ -1,6 +1,5 @@
 const next = require("next");
 const express = require("express");
-const compression = require("compression");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -53,16 +52,17 @@ const roleFilters = ["all", "top", "middle", "jungle", "adc", "support"];
 const orderFilters = ["descend", "ascend"];
 
 //  an object with the urls to be proxied
-// const proxy = {
-//   "/lolapi": {
-//     target: "http://localhost:5000/"
-//     // pathRewrite: { "^/lolapi": "/" },
-//     // changeOrigin: true
-//   },
-//   "/ggapi": {
-//     target: "http://localhost:5000/"
-//   }
-// };
+const proxy =
+  process.env.NODE_ENV !== "production"
+    ? {
+        "/lolapi": {
+          target: "http://localhost:5000/"
+        },
+        "/ggapi": {
+          target: "http://localhost:5000/"
+        }
+      }
+    : null;
 
 const dev = process.env.NODE_ENV !== "production";
 // pass dev === true to next
@@ -76,7 +76,6 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    server.use(compression());
     // Helmet can help protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately.
     // Helmet is actually just a collection of nine smaller middleware functions that set security-related HTTP headers
     server.use(helmet());
@@ -127,12 +126,12 @@ app
     );
 
     // Set up the proxy.
-    // if (proxy) {
-    //   const proxyMiddleware = require("http-proxy-middleware");
-    //   Object.keys(proxy).forEach(function(context) {
-    //     server.use(proxyMiddleware(context, proxy[context]));
-    //   });
-    // }
+    if (proxy) {
+      const proxyMiddleware = require("http-proxy-middleware");
+      Object.keys(proxy).forEach(function(context) {
+        server.use(proxyMiddleware(context, proxy[context]));
+      });
+    }
 
     server.post("/pref", (req, res) => {
       req.session = req.body;

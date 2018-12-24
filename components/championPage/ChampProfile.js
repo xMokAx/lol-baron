@@ -46,6 +46,7 @@ const ChampProfile = ({
               </h2>
             ) : (
               <Link
+                scroll={false}
                 href={`/champion?elo=${selectedElo}&champName=${name}&role=${role}`}
                 as={`/champion/${selectedElo}/${name}/${role}`}
               >

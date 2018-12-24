@@ -14,6 +14,11 @@ const ChampionListItem = ({ champ, selectedElo }) => {
     <div className="column mgy-2 is-paddingless is-narrow champ-item-width champ-item-border is-flex flex-vertical flex-align-center has-text-centered">
       {roles.length && (
         <React.Fragment>
+          <ChampImage
+            champId={id}
+            className="image is-64x64 mgx-auto"
+            tooltip={true}
+          />
           <Link
             href={`/champion?elo=${selectedElo}&champName=${champName}&role=${
               ggRoles[roles[0].role]
@@ -23,11 +28,6 @@ const ChampionListItem = ({ champ, selectedElo }) => {
             }`}
           >
             <a className="has-text-white-ter has-text-weight-bold">
-              <ChampImage
-                champId={id}
-                className="image is-64x64 mgx-auto"
-                tooltip={true}
-              />
               {gameName}
             </a>
           </Link>

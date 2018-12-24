@@ -30,11 +30,10 @@ class Home extends Component {
         <h1 className="title is-3 is-size-4-mobile has-text-warning">
           First Time User ?
         </h1>
-        <small className="mgx-2">
+        <p className="mgx-2 is-size-7-mobile">
           This App Works Offline (Any Page or Data You Browsed Before You Can
-          Browse Again Without Internet Connection But They Won't be Up To
-          Date.)
-        </small>
+          Browse Again Without Internet Connection But They Won't be Up To Date)
+        </p>
         <div className="columns is-centered is-multiline is-marginless">
           <div className="column is-half-tablet is-one-third-desktop">
             <div className="card border-radius-6 transition-up">

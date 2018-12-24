@@ -256,43 +256,34 @@ class Match extends Component {
           </td>
           <td style={{ maxWidth: "120px" }}>
             <div className="is-flex flex-justify-center">
-              {role ? (
-                <Link
-                  href={`/champion?elo=${selectedElo}&champName=${champName}&role=${role}`}
-                  as={`/champion/${selectedElo}/${champName}/${role}`}
-                >
-                  <a className="has-text-white">
-                    <ChampImage
-                      tooltip={true}
-                      champ={champion}
-                      className="image is-48x48 mgr-vs"
-                      imgStyle="is-rounded"
-                    />
-                    <p
-                      className="text-overflow is-size-7"
+              <div className="is-flex flex-vertical">
+                <ChampImage
+                  tooltip={true}
+                  champ={champion}
+                  className="image is-48x48 mgr-vs"
+                  imgStyle="is-rounded"
+                />
+                {role ? (
+                  <Link
+                    href={`/champion?elo=${selectedElo}&champName=${champName}&role=${role}`}
+                    as={`/champion/${selectedElo}/${champName}/${role}`}
+                  >
+                    <a
+                      className="has-text-white text-overflow is-size-7"
                       style={{ maxWidth: "48px" }}
                     >
                       {champion.gameName}
-                    </p>
-                  </a>
-                </Link>
-              ) : (
-                <div className="has-text-white">
-                  <ChampImage
-                    tooltip={true}
-                    champ={champion}
-                    className="image is-48x48 mgr-vs"
-                    imgStyle="is-rounded"
-                  />
+                    </a>
+                  </Link>
+                ) : (
                   <p
-                    className="text-overflow is-size-7-tablet"
+                    className="has-text-white text-overflow is-size-7-tablet"
                     style={{ maxWidth: "48px" }}
                   >
                     {champion.gameName}
                   </p>
-                </div>
-              )}
-
+                )}
+              </div>
               <div>
                 <SummonerSpellImage
                   spellId={spell1Id}

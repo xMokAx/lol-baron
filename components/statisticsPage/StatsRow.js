@@ -58,19 +58,19 @@ const StatsRow = ({ champ, rank, selectedElo, sortProp }) => {
     <tr>
       <td>{rank}</td>
       <td>
-        <Link
-          href={`/champion?elo=${selectedElo}&champName=${champName}&role=${role}`}
-          as={`/champion/${selectedElo}/${champName}/${role}`}
-        >
-          <a className="has-text-primary is-flex flex-align-center">
-            <ChampImage
-              className="image is-32x32 mgr-1"
-              tooltip={true}
-              champId={championId}
-            />
-            {gameName}
-          </a>
-        </Link>
+        <div className="is-flex flex-align-center">
+          <ChampImage
+            className="image is-32x32 mgr-1"
+            tooltip={true}
+            champId={championId}
+          />
+          <Link
+            href={`/champion?elo=${selectedElo}&champName=${champName}&role=${role}`}
+            as={`/champion/${selectedElo}/${champName}/${role}`}
+          >
+            <a className="has-text-primary">{gameName}</a>
+          </Link>
+        </div>
       </td>
       <td className="has-text-warning is-capitalized">{role}</td>
       <td className={winRateColor}>{(winRate * 100).toFixed(2)}%</td>

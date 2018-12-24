@@ -15,7 +15,6 @@
     "bulma": "^0.7.1",
     "bulma-badge": "^2.0.0",
     "classnames": "^2.2.6",
-    "compression": "^1.7.3",
     "cookie": "^0.3.1",
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-beta.3",

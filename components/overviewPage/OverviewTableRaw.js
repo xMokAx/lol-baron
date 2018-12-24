@@ -47,41 +47,41 @@ function OverviewTableRaw({
       </td>
       <td className="has-text-info">
         <div className="is-flex flex-align-center flex-justify-space-between fullwidth">
-          <Link
-            href={`/champion?elo=${selectedElo}&champName=${bestChampName}&role=${role}`}
-            as={`/champion/${selectedElo}/${bestChampName}/${role}`}
-          >
-            <a className="has-text-info is-flex flex-align-center">
-              <ChampImage
-                tooltip={true}
-                className="image is-32x32 mgr-s"
-                champ={bestChamp}
-              />
-              <p className="overview-champ text-overflow">
+          <div className="is-flex flex-align-center">
+            <ChampImage
+              tooltip={true}
+              className="image is-32x32 mgr-s"
+              champ={bestChamp}
+            />
+            <Link
+              href={`/champion?elo=${selectedElo}&champName=${bestChampName}&role=${role}`}
+              as={`/champion/${selectedElo}/${bestChampName}/${role}`}
+            >
+              <a className="has-text-info overview-champ text-overflow">
                 {bestChamp.gameName}
-              </p>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </div>
           <p>{bestScore}</p>
         </div>
       </td>
       <td className="has-text-danger">
         <div className="is-flex flex-align-center flex-justify-space-between">
-          <Link
-            href={`/champion?elo=${selectedElo}&champName=${worstChampName}&role=${role}`}
-            as={`/champion/${selectedElo}/${worstChampName}/${role}`}
-          >
-            <a className="has-text-danger is-flex flex-align-center">
-              <ChampImage
-                tooltip={true}
-                className="image is-32x32 mgr-s"
-                champ={worstChamp}
-              />
-              <p className="overview-champ text-overflow">
+          <div className="is-flex flex-align-center">
+            <ChampImage
+              tooltip={true}
+              className="image is-32x32 mgr-s"
+              champ={worstChamp}
+            />
+            <Link
+              href={`/champion?elo=${selectedElo}&champName=${worstChampName}&role=${role}`}
+              as={`/champion/${selectedElo}/${worstChampName}/${role}`}
+            >
+              <a className="has-text-danger overview-champ text-overflow">
                 {worstChamp.gameName}
-              </p>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </div>
           <p>{worstScore}</p>
         </div>
       </td>
