@@ -1,0 +1,586 @@
+// @import "../node_modules/bulma/sass/utilities/initial-variables";
+// @import "../node_modules/bulma/sass/utilities/functions";
+// @import "../node_modules/bulma/sass/utilities/derived-variables";
+// // General colors
+// $grey-darkest: #2b2b2b;
+// $body-background-color: $grey-darkest;
+
+// .has-background-darkest {
+//   background: $grey-darkest !important;
+// }
+
+// .has-text-grey-darkest {
+//   color: $grey-darkest !important;
+// }
+
+// $background: $black-bis;
+// // Text colors
+// $text: $light;
+// $text-invert: findColorInvert($text);
+// $text-light: $grey-light;
+// $text-strong: $white;
+// // title
+// $title-color: $light;
+// $subtitle-color: $grey-lighter;
+// // link colors
+// $link: $primary;
+// $link-invert: $primary-invert;
+// $link-visited: $purple;
+// $link-hover: $white;
+// $link-hover-border: $grey;
+// $link-focus: $white;
+// $link-focus-border: $primary;
+// $link-active: $white;
+// $link-active-border: $grey-lighter;
+// // border
+// $border: $grey-dark;
+// $border-hover: $grey;
+// // input
+// $input-color: $white;
+// $input-background-color: $grey-darker;
+// $input-border-color: $grey-dark;
+// $input-shadow: inset 0 1px 2px rgba($black, 0.1);
+// $input-hover-color: $warning;
+// $input-hover-border-color: $grey;
+// $input-focus-color: $warning;
+// $input-focus-border-color: $link;
+// $input-focus-box-shadow-color: rgba($link, 0.25);
+// $input-disabled-color: $text-light;
+// $input-disabled-background-color: $background;
+// $input-disabled-border-color: $background;
+// $input-arrow: $link;
+// $input-icon-color: $grey-dark;
+// $input-icon-active-color: $grey;
+// $input-radius: $radius;
+// // label
+// $label-color: $light;
+// $label-weight: $weight-bold;
+// // table
+// $table-color: $light;
+// $table-background-color: $black-ter;
+// $table-cell-border: 1px solid $grey-dark;
+// $table-cell-heading-color: $white;
+// $table-head-cell-color: $white;
+// $table-foot-cell-color: $white;
+// $table-row-hover-background-color: $black-bis;
+// $table-striped-row-even-background-color: $grey-darkest;
+// $table-striped-row-even-hover-background-color: $black-bis;
+// $table-row-active-background-color: $black-bis;
+// $table-row-active-color: $white;
+// // navbar
+// $navbar-background-color: $dark;
+// $navbar-box-shadow-color: rgba($background, 0.6);
+// $navbar-box-shadow-size: 0 3px 3px 0;
+// $navbar-item-color: $link;
+// $navbar-item-hover-color: $warning;
+// $navbar-item-hover-background-color: $black-ter;
+// $navbar-item-active-color: $warning;
+// $navbar-item-active-background-color: $black-ter;
+// $navbar-tab-hover-background-color: transparent;
+// $navbar-tab-hover-border-bottom-color: $link;
+// $navbar-tab-active-color: $link;
+// $navbar-tab-active-background-color: transparent;
+// $navbar-tab-active-border-bottom-color: $link;
+// $navbar-dropdown-background-color: $grey-darker;
+// $navbar-dropdown-arrow: $link;
+// $navbar-dropdown-boxed-shadow: 0 8px 8px rgba($white, 0.1),
+// 0 0 0 1px rgba($white, 0.1);
+// $navbar-dropdown-item-hover-color: $white;
+// $navbar-dropdown-item-hover-background-color: $background;
+// $navbar-dropdown-item-active-color: $link;
+// $navbar-dropdown-item-active-background-color: $black-bis;
+// $navbar-divider-background-color: $background;
+// // tabs
+// $tabs-boxed-link-active-background-color: $background;
+// $tabs-link-padding: 0.5em 0.5em;
+// $tabs-boxed-link-hover-border-bottom-color: $border-hover;
+// $tabs-boxed-link-active-border-color: $border-hover;
+// // card
+// $card-color: $text;
+// $card-background-color: $black-bis;
+// $card-shadow: 0 2px 3px rgba($white, 0.1),
+// 0 0 0 1px rgba($white, 0.1);
+// $card-header-color: $text-strong;
+// $card-header-shadow: 0 1px 2px rgba($white, 0.1);
+// // box
+// $box-background-color: $black-bis;
+// $box-shadow: 0 2px 3px rgba($white, 0.1),
+// 0 0 0 1px rgba($white, 0.1);
+// $box-link-hover-shadow: 0 2px 3px rgba($white, 0.1),
+// 0 0 0 1px $link;
+// $box-link-active-shadow: inset 0 1px 2px rgba($white, 0.2),
+// 0 0 0 1px $link;
+// // notification
+// $notification-padding: 1em;
+// // message
+// $message-body-padding: 0.75em 1em;
+// // button
+// $button-color: $white;
+// $button-background-color: $grey-darker;
+// $button-border-color: $grey-dark;
+// $button-hover-color: $link-hover;
+// $button-hover-border-color: $link-hover-border;
+// $button-focus-color: $link-focus;
+// $button-focus-border-color: $link-focus-border;
+// $button-focus-box-shadow-size: 0 0 0 0.125em;
+// $button-focus-box-shadow-color: rgba($link, 0.25);
+// $button-active-color: $link-active;
+// $button-active-border-color: $link-active-border;
+// $button-text-color: $text;
+// $button-text-hover-background-color: $background;
+// $button-text-hover-color: $text-strong;
+// $button-disabled-background-color: $grey-darker;
+// $button-disabled-border-color: $grey-dark;
+// $button-disabled-shadow: none;
+// $button-disabled-opacity: 0.5;
+// $button-static-color: $grey-light;
+// $button-static-background-color: $grey-dark;
+// $button-static-border-color: $grey-darker;
+// // footer
+// $footer-background-color: $dark;
+// // modal
+// $modal-background-background-color: rgba($black, 0.9);
+// $modal-card-head-background-color: $dark;
+// $modal-card-head-border-bottom: 1px solid $border;
+// $modal-card-body-background-color: $black-ter;
+// $modal-card-title-color: $text-strong;
+
+// .button.is-active {
+//   background-color: $black-ter;
+// }
+
+// .button.primary,
+// .button.danger,
+// .button.info {
+
+//   &:hover,
+//   &:focus,
+//   &.is-active {
+//     color: $warning;
+//   }
+// }
+
+// .button.primary {
+//   color: $link;
+//   border: 0;
+// }
+
+// .button.danger {
+//   color: $danger;
+//   border: 0;
+// }
+
+// .button.info {
+//   color: $info;
+//   border: 0;
+// }
+
+// $badge-border-radius: 2px;
+
+// @import "../node_modules/bulma-badge/dist/css/bulma-badge";
+// @import "../node_modules/bulma/bulma";
+
+// // links hover colors
+// @each $name,
+// $pair in $colors {
+//   $color: nth($pair, 1);
+
+//   a.has-text-#{$name} {
+
+//     &:hover,
+//     &:focus {
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+// @each $name,
+// $shade in $shades {
+//   a.has-text-#{$name} {
+
+//     &:hover,
+//     &:focus {
+//       text-decoration: $shade underline;
+//     }
+//   }
+// }
+
+// // primary and danger link hover and focus
+// a.has-text-primary,
+// a.has-text-danger,
+// a.has-text-info {
+
+//   &:hover,
+//   &:focus {
+//     color: $warning !important;
+//   }
+// }
+
+// // link focus
+// a:focus {
+//   outline-color: $link;
+//   color: $warning;
+// }
+
+// // tag primary
+// .tag.is-primary {
+//   color: $black-ter !important;
+// }
+
+// // button color and bg color
+// .button {
+
+//   &.is-primary,
+//   &.is-info,
+//   &.is-danger {
+//     color: $black-ter !important;
+
+//     &:hover:not(:disabled),
+//     &:focus:not(:disabled) {
+//       // background-color: lighten($primary, 5%)
+//       background-color: $warning;
+//     }
+//   }
+// }
+
+
+// // footer
+// .footer {
+//   padding: 3rem 1.5rem;
+// }
+
+// // modal close button
+// .modal-card-head button.delete {
+//   background-color: $grey-lighter;
+//   max-height: 32px;
+//   max-width: 32px;
+//   height: 32px;
+//   width: 32px;
+
+//   &:hover,
+//   &:focus {
+//     background-color: $white
+//   }
+// }
+
+// .modal-card-head .delete::before,
+// .modal-close::before,
+// .modal-card-head .delete::after,
+// .modal-close::after {
+//   background-color: $black-ter
+// }
+
+
+
+// @import "../node_modules/tippy.js/dist/tippy.css";
+// @import "./app";
+// @import "./runebuilder.scss";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+// General colors
+$background: $black-bis;
+$warning: $yellow;
+$dark: $grey-darker;
+$light: $white-ter;
+// Text colors
+$text: $white-ter;
+$text-invert: findColorInvert($text);
+$text-light: $grey-light;
+$text-strong: $white;
+// link colors
+$turquoise-invert:findColorInvert($turquoise);
+$link: $turquoise;
+$link-invert: $turquoise-invert;
+$link-visited: $purple;
+$link-hover: $white;
+$link-hover-border: $grey;
+$link-focus: $white;
+$link-focus-border: $turquoise;
+$link-active: $white;
+$link-active-border: $grey-lighter;
+// border
+$border: $grey-dark;
+$border-hover: $grey;
+
+$grey-darkest: #2b2b2b;
+$body-background-color: $grey-darkest;
+
+.has-background-darkest {
+  background: $grey-darkest !important;
+}
+
+.has-text-grey-darkest {
+  color: $grey-darkest !important;
+}
+
+// title
+$title-color: $white-ter;
+$subtitle-color: $grey-lighter;
+
+// input
+$input-color: $white;
+$input-background-color: $grey-darker;
+$input-border-color: $grey-dark;
+$input-shadow: inset 0 1px 2px rgba($black, 0.1);
+$input-hover-color: $warning;
+$input-hover-border-color: $grey;
+$input-focus-color: $warning;
+$input-focus-border-color: $link;
+$input-focus-box-shadow-color: rgba($link, 0.25);
+$input-disabled-color: $text-light;
+$input-disabled-background-color: $background;
+$input-disabled-border-color: $background;
+$input-arrow: $link;
+$input-icon-color: $grey-dark;
+$input-icon-active-color: $grey;
+$input-radius: $radius;
+// label
+$label-color: $white-ter;
+$label-weight: $weight-bold;
+// table
+$table-color: $white-ter;
+$table-background-color: $black-ter;
+$table-cell-border: 1px solid $grey-dark;
+$table-cell-heading-color: $white;
+$table-head-cell-color: $white;
+$table-foot-cell-color: $white;
+$table-row-hover-background-color: $black-bis;
+$table-striped-row-even-background-color: $grey-darkest;
+$table-striped-row-even-hover-background-color: $black-bis;
+$table-row-active-background-color: $black-bis;
+$table-row-active-color: $white;
+// navbar
+$navbar-background-color: $dark;
+$navbar-box-shadow-color: rgba($black, 0.6);
+$navbar-box-shadow-size: 0 3px 3px 0;
+$navbar-item-color: $link;
+$navbar-item-hover-color: $warning;
+$navbar-item-hover-background-color: $black-ter;
+$navbar-item-active-color: $warning;
+$navbar-item-active-background-color: $black-ter;
+$navbar-tab-hover-background-color: transparent;
+$navbar-tab-hover-border-bottom-color: $link;
+$navbar-tab-active-color: $link;
+$navbar-tab-active-background-color: transparent;
+$navbar-tab-active-border-bottom-color: $link;
+$navbar-dropdown-background-color: $grey-darker;
+$navbar-dropdown-arrow: $link;
+$navbar-dropdown-boxed-shadow: 0 8px 8px rgba($white, 0.1),
+0 0 0 1px rgba($white, 0.1);
+$navbar-dropdown-item-hover-color: $white;
+$navbar-dropdown-item-hover-background-color: $background;
+$navbar-dropdown-item-active-color: $link;
+$navbar-dropdown-item-active-background-color: $black-bis;
+$navbar-divider-background-color: $border;
+// tabs
+$tabs-boxed-link-active-background-color: $background;
+$tabs-link-padding: 0.5em 0.5em;
+$tabs-boxed-link-hover-border-bottom-color: $border-hover;
+$tabs-boxed-link-active-border-color: $border-hover;
+// card
+$card-color: $text;
+$card-background-color: $black-bis;
+$card-shadow: 0 2px 3px rgba($white, 0.1),
+0 0 0 1px rgba($white, 0.1);
+$card-header-color: $text-strong;
+$card-header-shadow: 0 1px 2px rgba($white, 0.1);
+// box
+$box-background-color: $black-bis;
+$box-shadow: 0 2px 3px rgba($white, 0.1),
+0 0 0 1px rgba($white, 0.1);
+$box-link-hover-shadow: 0 2px 3px rgba($white, 0.1),
+0 0 0 1px $link;
+$box-link-active-shadow: inset 0 1px 2px rgba($white, 0.2),
+0 0 0 1px $link;
+// notification
+$notification-padding: 0.75em;
+// message
+$message-body-padding: 0.75em 1em;
+// button
+$button-color: $white;
+$button-background-color: $grey-darker;
+$button-border-color: $grey-dark;
+$button-hover-color: $link-hover;
+$button-hover-border-color: $link-hover-border;
+$button-focus-color: $link-focus;
+$button-focus-border-color: $link-focus-border;
+$button-focus-box-shadow-size: 0 0 0 0.125em;
+$button-focus-box-shadow-color: rgba($link, 0.25);
+$button-active-color: $link-active;
+$button-active-border-color: $link-active-border;
+$button-text-color: $text;
+$button-text-hover-background-color: $background;
+$button-text-hover-color: $text-strong;
+$button-disabled-background-color: $grey-darker;
+$button-disabled-border-color: $grey-dark;
+$button-disabled-shadow: none;
+$button-disabled-opacity: 0.5;
+$button-static-color: $grey-light;
+$button-static-background-color: $grey-dark;
+$button-static-border-color: $grey-darker;
+// footer
+$footer-background-color: $dark;
+// modal
+$modal-background-background-color: rgba($black, 0.9);
+$modal-card-head-background-color: $dark;
+$modal-card-head-border-bottom: 1px solid $border;
+$modal-card-body-background-color: $black-ter;
+$modal-card-title-color: $text-strong;
+
+$badge-border-radius: 2px;
+
+@import "../node_modules/bulma/sass/utilities/mixins";
+@import "../node_modules/bulma/sass/utilities/derived-variables";
+@import "../node_modules/bulma/sass/utilities/animations";
+@import "../node_modules/bulma/sass/utilities/controls";
+@import "../node_modules/bulma/sass/base/_all";
+
+@import "../node_modules/bulma-badge/dist/css/bulma-badge";
+@import "../node_modules/bulma/sass/elements/box";
+@import "../node_modules/bulma/sass/elements/button";
+@import "../node_modules/bulma/sass/elements/container";
+@import "../node_modules/bulma/sass/elements/form";
+@import "../node_modules/bulma/sass/elements/icon";
+@import "../node_modules/bulma/sass/elements/notification";
+@import "../node_modules/bulma/sass/elements/image";
+@import "../node_modules/bulma/sass/elements/other";
+@import "../node_modules/bulma/sass/elements/table";
+@import "../node_modules/bulma/sass/elements/tag";
+@import "../node_modules/bulma/sass/elements/title";
+@import "../node_modules/bulma/sass/components/card";
+@import "../node_modules/bulma/sass/components/dropdown";
+@import "../node_modules/bulma/sass/components/media";
+@import "../node_modules/bulma/sass/components/message";
+@import "../node_modules/bulma/sass/components/modal";
+@import "../node_modules/bulma/sass/components/navbar";
+@import "../node_modules/bulma/sass/components/tabs";
+@import "../node_modules/bulma/sass/grid/columns";
+@import "../node_modules/bulma/sass/layout/hero";
+@import "../node_modules/bulma/sass/layout/footer";
+
+
+.button.is-active {
+  background-color: $black-ter;
+}
+
+// menu button
+.button.primary {
+
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: $warning;
+  }
+}
+
+.button.primary {
+  color: $link;
+  border: 0;
+}
+
+.button.danger {
+  color: $danger;
+  border: 0;
+}
+
+.button.info {
+  color: $info;
+  border: 0;
+}
+
+// links hover colors
+@each $name,
+$pair in $colors {
+  $color: nth($pair, 1);
+
+  a.has-text-#{$name} {
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+@each $name,
+$shade in $shades {
+  a.has-text-#{$name} {
+
+    &:hover,
+    &:focus {
+      text-decoration: $shade underline;
+    }
+  }
+}
+
+// primary and danger link hover and focus
+a.has-text-primary,
+a.has-text-danger,
+a.has-text-info {
+
+  &:hover,
+  &:focus {
+    color: $warning !important;
+  }
+}
+
+// link focus
+a:focus {
+  outline-color: $link;
+  color: $warning;
+}
+
+// tag primary
+.tag.is-primary {
+  color: $black-ter !important;
+}
+
+// button color and bg color
+.button {
+
+  &.is-primary,
+  &.is-info,
+  &.is-danger {
+    color: $black-ter !important;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      // background-color: lighten($primary, 5%)
+      background-color: $warning;
+    }
+  }
+}
+
+
+// footer
+.footer {
+  padding: 3rem 1.5rem;
+}
+
+// modal close button
+.modal-card-head button.delete {
+  background-color: $grey-lighter;
+  max-height: 32px;
+  max-width: 32px;
+  height: 32px;
+  width: 32px;
+
+  &:hover,
+  &:focus {
+    background-color: $white
+  }
+}
+
+.modal-card-head .delete::before,
+.modal-close::before,
+.modal-card-head .delete::after,
+.modal-close::after {
+  background-color: $black-ter
+}
+
+
+
+@import "../node_modules/tippy.js/dist/tippy.css";
+@import "./runebuilder.scss";
+@import "./app";

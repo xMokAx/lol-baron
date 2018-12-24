@@ -1,0 +1,417 @@
+/* app_block */
+.app_block * {
+  outline: 0;
+  text-align: left;
+}
+
+.app_block {
+  margin-bottom: 5px;
+}
+
+/* app_outer */
+.app_outer {
+  margin: auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 1061px;
+  height: 100%;
+  background: linear-gradient(0deg, #6c5021 0, #ab8f57 100%);
+  box-shadow: 0 0 45px #000;
+  position: relative;
+}
+
+/* app_inner */
+.app_inner {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  line-height: 1.5;
+}
+
+/* path_block */
+.path_block {
+  height: 100%;
+  /* background-color: #010a13; */
+  background-color: #0a0a0a;
+  position: relative;
+}
+
+/* path_body */
+.path_body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* path_column */
+.path_column {
+  flex: 0 0 auto;
+  width: 275px;
+  position: relative;
+}
+
+.path_column_left {
+  margin-right: 40px;
+}
+
+/* stat_block */
+.stat_blocks {
+  margin-top: 32px;
+  margin-bottom: 22px;
+}
+
+/* slot_block */
+.slot_block {
+  display: flex;
+  margin-bottom: -1px;
+}
+
+/* block_height */
+.path_block_height {
+  height: 120px;
+}
+
+.keystone_block_height {
+  height: 120px;
+}
+
+.rune_block_height {
+  height: 100px;
+}
+
+.stat_block_height {
+  height: 50px;
+}
+
+/* slot_left */
+.slot_left {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+  width: 107px;
+  position: relative;
+}
+
+/* Progress Bar */
+/* progress_block */
+.progress_block {
+  position: absolute;
+  top: 89px;
+  left: 50%;
+}
+
+/* progress_block_primary */
+.progress_block_primary {
+  height: 378px;
+}
+
+/* progress_block_secondary */
+.progress_block_secondary {
+  height: 161px;
+}
+
+/* progress_block_stat */
+.progress_block_stat {
+  height: 100px;
+  top: 30px;
+}
+
+/* progress_border */
+.progress_border {
+  margin-left: -7px;
+  width: 14px;
+  height: 100%;
+  padding: 2px;
+  border: 2px solid rgba(200, 170, 110, 0.2);
+}
+
+/* progress_bar_outer */
+.progress_bar_outer {
+  overflow: hidden;
+  width: 6px;
+  height: 100%;
+  background: #1c1f21;
+}
+
+/* progress_bar_height */
+.progress_bar_height {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* progress_bar_inner */
+.progress_bar_inner {
+  width: 100%;
+  height: 100%;
+}
+
+/* progress_bar_highlight */
+.progress_bar_highlight {
+  width: 100%;
+  height: 800px;
+  box-shadow: inset 0 0 3px #000;
+}
+
+/* perk */
+.perk {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: 0 0;
+  border-radius: 50%;
+}
+
+/* path */
+.path {
+  width: 48px;
+  height: 48px;
+}
+
+/* keystone */
+.keystone {
+  width: 62px;
+  height: 62px;
+  background-color: #1e2328;
+}
+
+/* rune */
+.rune {
+  width: 48px;
+  height: 48px;
+  background-color: #1e2328;
+}
+
+/* stat */
+.stat {
+  width: 28px;
+  height: 28px;
+  background-color: #1e2328;
+}
+
+/* path_circles */
+.path_circles {
+  margin: -32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+/* path_circle1 */
+.path_circle1 {
+  fill: none;
+  stroke-width: 2;
+  transform: translateY(6%);
+  transform-origin: 50% 50%;
+}
+
+/* path_circle2 */
+.path_circle2 {
+  transform: rotate(120deg) translateY(6%);
+}
+
+/* path_circle3 */
+.path_circle3 {
+  transform: rotate(240deg) translateY(6%);
+}
+
+/* path_cup */
+.path_cup {
+  overflow: visible;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  left: -19px;
+  bottom: -19px;
+}
+
+/* perk_icon */
+.perk_icon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* path_icon */
+.path_icon {
+  width: 46px;
+  height: 46px;
+}
+
+/* keystone_icon */
+.keystone_icon {
+  width: 108px;
+  height: 108px;
+}
+
+/* rune_icon */
+.rune_icon {
+  width: 44px;
+  height: 44px;
+}
+
+/* stat_icon */
+.stat_icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* perk_outerframe */
+.perk_outerframe {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+}
+
+/* keystone_outerframe */
+.keystone_outerframe {
+  width: 76px;
+  height: 76px;
+}
+
+/* rune_outerframe */
+.rune_outerframe {
+  width: 60px;
+  height: 60px;
+}
+
+/* stat_outerframe */
+.stat_outerframe {
+  width: 36px;
+  height: 36px;
+}
+
+/* to show outerframe */
+.perk:hover .perk_outerframe {
+  opacity: 0.5;
+}
+
+/* rune_innerframe */
+.rune_innerframe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* slot_right */
+.slot_right {
+  flex-grow: 1;
+  position: relative;
+  width: 198px;
+}
+
+/* description_block */
+.description_block {
+  padding-top: 22px;
+}
+
+.path_description_block {
+  padding-top: 24px;
+}
+
+.stat_description_block {
+  padding-top: 12px;
+}
+
+/* description_title */
+.description_title {
+  font-family: "Sura", serif;
+  letter-spacing: 0.075em;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 18px;
+  margin-bottom: 1px;
+}
+
+/* description_paragraph */
+.description_paragraph {
+  color: #a09b8c;
+  font-family: "Lato", $family-sans-serif;
+  letter-spacing: 0.025em;
+  margin: 0 0 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 47px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.description_paragraph>div>lol-uikit-tooltipped-keyword,
+.description_paragraph>div>lol-uikit-tooltipped-keyword>font {
+  color: #fff;
+}
+
+/* keystone_flourish */
+.keystone_flourish {
+  position: absolute;
+  right: 0;
+  width: 286px;
+  height: 9px;
+}
+
+/* keystone_flourish_up */
+.keystone_flourish_up {
+  top: 0;
+}
+
+/* keystone_flourish_down */
+.keystone_flourish_down {
+  bottom: 0;
+  transform: scale(1, -1);
+}
+
+/* perks_svg_gradients */
+.perks_svg_gradients {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1471px) {
+  .path_body {
+    display: block;
+    padding: 0 0 0 32px;
+  }
+
+  .stat_blocks {
+    margin-top: 22px;
+  }
+
+  .path_column {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 668px) {
+  .path_body {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .path_column_left {
+    margin-right: 40px;
+  }
+
+  .stat_blocks {
+    margin-top: 32px;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .path_body {
+    padding-left: 16px;
+  }
+}
