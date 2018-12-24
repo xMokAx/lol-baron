@@ -16,7 +16,7 @@ module.exports = {
         "https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/lol-next",
       path: "/home/ubuntu/lol-next",
       "post-deploy":
-        "yarn install && yarn build && pm2 startOrRestart ecosystem.config.js"
+        "yarn install && yarn build && pm2 startOrRestart ecosystem.config.js --env production"
     }
   }
 };
