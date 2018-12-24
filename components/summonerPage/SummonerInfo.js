@@ -138,9 +138,7 @@ class SummonerInfo extends Component {
                       {rank.tier === "MASTER" || rank.tier === "CHALLENGER" ? (
                         <Image
                           tooltip={true}
-                          src={`/static/images/tier-icons/base-icons/${
-                            rank.tier
-                          }.png`}
+                          src={`/static/images/tier-icons/base-icons/${rank.tier.toLowerCase()}.png`}
                           alt={`${rank.tier} (${rank.leaguePoints} pts)`}
                           className="image is-64x64"
                           imgStyle="border-radius-4"
@@ -148,9 +146,7 @@ class SummonerInfo extends Component {
                       ) : (
                         <Image
                           tooltip={true}
-                          src={`/static/images/tier-icons/tier-icons/${
-                            rank.tier
-                          }_${rank.rank}.png`}
+                          src={`/static/images/tier-icons/tier-icons/${rank.tier.toLowerCase()}_${rank.rank.toLowerCase()}.png`}
                           alt={`${rank.tier} ${rank.rank} (${
                             rank.leaguePoints
                           } pts)`}
