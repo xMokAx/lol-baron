@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "lol-next",
-      script: "./server/server.js"
+      script: "yarn start"
     }
   ],
   deploy: {

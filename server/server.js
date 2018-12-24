@@ -53,16 +53,16 @@ const roleFilters = ["all", "top", "middle", "jungle", "adc", "support"];
 const orderFilters = ["descend", "ascend"];
 
 //  an object with the urls to be proxied
-const proxy = {
-  "/lolapi": {
-    target: "http://localhost:5000/"
-    // pathRewrite: { "^/lolapi": "/" },
-    // changeOrigin: true
-  },
-  "/ggapi": {
-    target: "http://localhost:5000/"
-  }
-};
+// const proxy = {
+//   "/lolapi": {
+//     target: "http://localhost:5000/"
+//     // pathRewrite: { "^/lolapi": "/" },
+//     // changeOrigin: true
+//   },
+//   "/ggapi": {
+//     target: "http://localhost:5000/"
+//   }
+// };
 
 const dev = process.env.NODE_ENV !== "production";
 // pass dev === true to next
@@ -127,12 +127,12 @@ app
     );
 
     // Set up the proxy.
-    if (proxy) {
-      const proxyMiddleware = require("http-proxy-middleware");
-      Object.keys(proxy).forEach(function(context) {
-        server.use(proxyMiddleware(context, proxy[context]));
-      });
-    }
+    // if (proxy) {
+    //   const proxyMiddleware = require("http-proxy-middleware");
+    //   Object.keys(proxy).forEach(function(context) {
+    //     server.use(proxyMiddleware(context, proxy[context]));
+    //   });
+    // }
 
     server.post("/pref", (req, res) => {
       req.session = req.body;
