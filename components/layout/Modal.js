@@ -90,7 +90,7 @@ class Modal extends Component {
   handleSubmit = e => {
     e.preventDefault();
     let { prefRegion, prefSummoner, prefElo, prefChamp } = this.state;
-    prefSummoner = prefSummoner.replace(/ /gi, "");
+    prefSummoner = prefSummoner.toLowerCase().replace(/ /gi, "");
     this.setState({
       isFetching: true
     });
