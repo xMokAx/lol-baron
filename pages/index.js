@@ -67,7 +67,7 @@ class Home extends Component {
               </div>
               <div className="card-content pd-12">
                 <p className="title is-4 is-size-5-mobile">
-                  Champion Statistics
+                  Champion Analytics
                 </p>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Win Rate, Best Build, Best Runes, Matchups And More!
@@ -88,7 +88,7 @@ class Home extends Component {
               </div>
               <div className="card-content pd-12">
                 <p className="title is-4 is-size-5-mobile">
-                  Champions Statitics
+                  Champions Statistics
                 </p>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Sortable And Filterable Data Table Comparing All Champs Stats

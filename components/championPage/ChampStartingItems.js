@@ -17,7 +17,7 @@ const ChampStartingItems = ({ data }) => {
           <ItemImage
             key={i}
             itemId={Number(id)}
-            className="image is-32x32 mgr-s"
+            className="image is-40x40 mgr-s"
           />
         ))}
       </div>

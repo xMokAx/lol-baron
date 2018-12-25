@@ -113,6 +113,7 @@ active {
 
 // material icons
 .material-icons {
+  min-width: 24px;
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;

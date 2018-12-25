@@ -438,7 +438,7 @@ class Match extends Component {
               onClick={this.openMatchDetails}
               aria-label="show match details"
             >
-              <span className="icon is-small" style={{ width: "24px" }}>
+              <span className="icon is-small">
                 <i className="material-icons">
                   {isDetailsOpened ? "expand_less" : "expand_more"}
                 </i>

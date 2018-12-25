@@ -12,7 +12,7 @@ const ChampTrinket = ({ data }) => {
     <React.Fragment>
       <TitleSec title="Trinket" />
       <div className="is-flex flex-vertical flex-align-center">
-        <ItemImage itemId={Number(hash)} className="image is-32x32" />
+        <ItemImage itemId={Number(hash)} className="image is-40x40" />
         <BuildText winrate={winrate} count={count} />
       </div>
     </React.Fragment>

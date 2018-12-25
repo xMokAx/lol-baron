@@ -14,11 +14,11 @@ const ChampSummoners = ({ data }) => {
       <div className="is-flex flex-vertical">
         <div>
           <SummonerSpellImage
-            className="image is-32x32 mgr-s is-inline-block"
+            className="image is-40x40 mgr-s is-inline-block"
             spellId={summoner1Id}
           />
           <SummonerSpellImage
-            className="image is-32x32 is-inline-block"
+            className="image is-40x40 is-inline-block"
             spellId={summoner2Id}
           />
         </div>
