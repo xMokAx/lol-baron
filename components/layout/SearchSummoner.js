@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Router from "next/router";
 import classNames from "classnames";
+import XRegExp from "xregexp";
 
 import { regions } from "../../constants/lolConstants";
 
@@ -35,7 +36,7 @@ class SearchSummoner extends Component {
     let region = this.Select.select.value;
     let summonerQuery = this.state.summonerQuery
       .toLowerCase()
-      .replace(new RegExp("([^0-9_.\\p{L}]+)", "giu"), "");
+      .replace(new XRegExp("([^0-9_.\\p{L}]+)", "giu"), "");
 
     if (!summonerQuery) {
       this.setState({

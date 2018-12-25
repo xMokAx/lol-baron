@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import axios from "axios";
+import XRegExp from "xregexp";
 
 import { ggElo } from "../../constants/ggConstants";
 import { regions } from "../../constants/lolConstants";
@@ -55,10 +56,7 @@ class Modal extends Component {
 
   handleSummonerInputChange = e => {
     this.setState({
-      prefSummoner: e.target.value.replace(
-        new RegExp("([^0-9_. \\p{L}]+)", "giu"),
-        ""
-      )
+      prefSummoner: e.target.value
     });
   };
 
@@ -90,7 +88,10 @@ class Modal extends Component {
   handleSubmit = e => {
     e.preventDefault();
     let { prefRegion, prefSummoner, prefElo, prefChamp } = this.state;
-    prefSummoner = prefSummoner.toLowerCase().replace(/ /gi, "");
+    prefSummoner = prefSummoner
+      .toLowerCase()
+      .replace(new XRegExp("([^0-9_.\\p{L}]+)", "giu"), "");
+
     this.setState({
       isFetching: true
     });

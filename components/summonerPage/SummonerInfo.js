@@ -135,25 +135,15 @@ class SummonerInfo extends Component {
                 <div className="column is-narrow" key={rank.queueType}>
                   <div className="is-flex flex-wrap flex-justify-center">
                     <div>
-                      {rank.tier === "MASTER" || rank.tier === "CHALLENGER" ? (
-                        <Image
-                          tooltip={true}
-                          src={`/static/images/tier-icons/base-icons/${rank.tier.toLowerCase()}.png`}
-                          alt={`${rank.tier} (${rank.leaguePoints} pts)`}
-                          className="image is-64x64"
-                          imgStyle="border-radius-4"
-                        />
-                      ) : (
-                        <Image
-                          tooltip={true}
-                          src={`/static/images/tier-icons/tier-icons/${rank.tier.toLowerCase()}_${rank.rank.toLowerCase()}.png`}
-                          alt={`${rank.tier} ${rank.rank} (${
-                            rank.leaguePoints
-                          } pts)`}
-                          className="image is-64x64"
-                          imgStyle="border-radius-4"
-                        />
-                      )}
+                      <Image
+                        tooltip={true}
+                        src={`/static/images/emblems/${rank.tier.toLowerCase()}_Emblem.png`}
+                        alt={`${rank.tier} ${rank.rank} (${
+                          rank.leaguePoints
+                        } pts)`}
+                        className="image is-64x64"
+                        imgStyle="border-radius-4"
+                      />
                     </div>
                     <div className="is-flex flex-vertical">
                       <div className="pd-1">

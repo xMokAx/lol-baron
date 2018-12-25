@@ -40,7 +40,8 @@
     "reselect": "^3.0.1",
     "session": "^0.1.0",
     "sort-by": "^1.2.0",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "xregexp": "^4.2.0"
   },
   "license": "ISC",
   "devDependencies": {
