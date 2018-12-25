@@ -237,10 +237,11 @@ class Modal extends Component {
               <p className="mgb-2">
                 <strong className="has-text-primary">{success}</strong>
               </p>
-
-              <i className="material-icons md-48 is-circle has-text-dark has-background-primary">
-                check_circle
-              </i>
+              <span className="icon is-large">
+                <i className="material-icons md-48 is-circle has-text-dark has-background-primary">
+                  check_circle
+                </i>
+              </span>
             </div>
           </div>
         ) : error ? (
