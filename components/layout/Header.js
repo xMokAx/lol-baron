@@ -175,7 +175,7 @@ class Header extends Component {
             <SearchSummoner />
           </div>
 
-          <div className="column is-2-mobile is-paddingless app-logo">
+          <div className="column is-2 is-paddingless app-logo">
             <figure className="image logo-image mgx-auto">
               <img
                 src="/static/favicon/android-chrome-256x256.png"
