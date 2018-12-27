@@ -75,7 +75,7 @@ class Header extends Component {
               <a tabIndex="1" className="navbar-item">
                 <figure className="image is-32x32 mgr-s">
                   <img
-                    src="/static/favicon/favicon-32x32.png"
+                    src="/static/favicon/android-chrome-256x256.png"
                     alt="lolbaron logo"
                   />
                 </figure>
