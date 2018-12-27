@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
             name="msapplication-config"
             content="/static/favicon/browserconfig.xml"
           />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#b86bff" />
         </Head>
         <body>
           <Main />
