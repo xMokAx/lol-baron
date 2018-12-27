@@ -49,7 +49,7 @@ class MyApp extends App {
           <Head>
             <meta
               name="description"
-              content="Lolmania.com provides League of Legends champion statistics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history and stats"
+              content="lolbaron.com provides League of Legends champion statistics, analytics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history and stats"
             />
           </Head>
         )}

@@ -8,19 +8,19 @@ class Home extends Component {
         <Head>
           <title>
             Lol statistics, builds, runes, skill orders, counters, summoner
-            match history - lolmania.com
+            match history - lolbaron.com
           </title>
           <meta
             name="description"
-            content="Lolmania.com provides League of Legends champion statistics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history, match details and stats."
+            content="lolbaron.com provides League of Legends champion statistics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history, match details and stats."
           />
           <meta
             property="og:title"
-            content="Lol statistics, builds, runes, skill orders, counters, summoner match history - lolmania.com"
+            content="Lol statistics, analytics, builds, runes, skill orders, counters, summoner match history - lolbaron.com"
           />
           <meta
             property="og:description"
-            content="lolmania.com provides League of Legends champion statistics, guides, builds, runes, skill orders and counters - summoner match history, match details and stats."
+            content="lolbaron.com provides League of Legends champion statistics, analytics, guides, builds, runes, skill orders and counters - summoner match history, match details and stats."
           />
           <meta
             property="og:image"

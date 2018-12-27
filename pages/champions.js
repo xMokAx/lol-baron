@@ -37,7 +37,7 @@ class champions extends Component {
         <Head>
           <title>
             League of legends champions list with currently played roles for
-            each champion - lolmania.com
+            each champion - lolbaron.com
           </title>
           <meta
             key="desc"
@@ -46,7 +46,7 @@ class champions extends Component {
           />
           <meta
             property="og:title"
-            content="League of legends champions list with currently played roles for each champion - lolmania.com"
+            content="League of legends champions list with currently played roles for each champion - lolbaron.com"
           />
           <meta
             property="og:description"

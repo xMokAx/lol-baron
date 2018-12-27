@@ -65,11 +65,21 @@ class Header extends Component {
     const { isMenuOpened } = this.state;
     return (
       <header className="hero-head">
-        <nav id="navbar" className="navbar has-shadow" aria-label="main navigation">
+        <nav
+          id="navbar"
+          className="navbar has-shadow"
+          aria-label="main navigation"
+        >
           <div className="navbar-brand">
             <Link href="/">
               <a tabIndex="1" className="navbar-item">
-                Lol Mania
+                <figure className="image is-32x32 mgr-s">
+                  <img
+                    src="/static/favicon/favicon-32x32.png"
+                    alt="lolbaron logo"
+                  />
+                </figure>
+                <strong>LOLBaron</strong>
               </a>
             </Link>
 
@@ -161,11 +171,20 @@ class Header extends Component {
           className="columns is-marginless is-mobile is-multiline is-centered has-background-black-ter is-size-6-7 is-size-7-mobile is-size-6-tablet flex-align-center has-text-centered"
           style={{ paddingTop: "12px" }}
         >
-          <div className="column is-12-mobile is-6-tablet">
+          <div className="column is-offset-2-mobile is-10-mobile is-5-tablet">
             <SearchSummoner />
           </div>
 
-          <div className="column is-12-mobile is-6-tablet">
+          <div className="column is-2-mobile is-paddingless app-logo">
+            <figure className="image logo-image mgx-auto">
+              <img
+                src="/static/favicon/android-chrome-256x256.png"
+                alt="lolbaron logo"
+              />
+            </figure>
+          </div>
+
+          <div className="column is-offset-2-mobile is-10-mobile is-5-tablet">
             <SearchChamp />
           </div>
 

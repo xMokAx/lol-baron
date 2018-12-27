@@ -94,7 +94,7 @@ class champion extends Component {
         <Head>
           <title>
             {gameName} {champRole} stats, guides, buildes, runes, counters,
-            matchups - lolmania.com
+            matchups - lolbaron.com
           </title>
           <meta
             name="description"
@@ -102,7 +102,7 @@ class champion extends Component {
           />
           <meta
             property="og:title"
-            content={`${gameName} ${champRole} stats, guides, buildes, runes, counters, matchups - lolmania.com`}
+            content={`${gameName} ${champRole} stats, guides, buildes, runes, counters, matchups - lolbaron.com`}
           />
           <meta
             property="og:description"

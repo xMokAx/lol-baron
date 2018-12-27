@@ -140,15 +140,17 @@ const ChampStats = ({ champName, roleData }) => {
             previousPosition={previousBanRates}
             totalPositions={totalPositions}
           />
-          <ChampStatsRow
-            role={role}
-            sortByProp="averageGames"
-            type="Player Base Average Games Played"
-            average={roleData.averageGames.toFixed(2)}
-            position={averageGamesScore}
-            previousPosition={previousAverageGamesScore}
-            totalPositions={totalPositions}
-          />
+          {roleData.averageGames && (
+            <ChampStatsRow
+              role={role}
+              sortByProp="averageGames"
+              type="Player Base Average Games Played"
+              average={roleData.averageGames.toFixed(2)}
+              position={averageGamesScore}
+              previousPosition={previousAverageGamesScore}
+              totalPositions={totalPositions}
+            />
+          )}
           <ChampStatsRow
             role={role}
             sortByProp="goldEarned"
@@ -250,8 +252,8 @@ const ChampStats = ({ champName, roleData }) => {
             dot={true}
             name={champName}
             dataKey="A"
-            stroke="#00d1b2"
-            fill="#00d1b2"
+            stroke="#b86bff"
+            fill="#b86bff"
             fillOpacity={0.6}
           />
           <Legend />

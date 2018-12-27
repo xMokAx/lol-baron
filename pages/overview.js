@@ -37,7 +37,7 @@ class overview extends Component {
         <Head>
           <title>
             League of legends overview of champions performance in ranked -
-            lolmania.com
+            lolbaron.com
           </title>
           <meta
             key="desc"
@@ -46,7 +46,7 @@ class overview extends Component {
           />
           <meta
             property="og:title"
-            content="League of legends overview of champions performance in ranked - lolmania.com"
+            content="League of legends overview of champions performance in ranked - lolbaron.com"
           />
           <meta
             property="og:description"

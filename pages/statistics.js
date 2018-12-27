@@ -74,7 +74,7 @@ class stats extends Component {
         <Head>
           <title>
             League of legends champions stats by champion role for the current
-            patch - lolmania.com
+            patch - lolbaron.com
           </title>
           <meta
             key="desc"
@@ -83,7 +83,7 @@ class stats extends Component {
           />
           <meta
             property="og:title"
-            content="League of legends champions stats by champion role for the current patch - lolmania.com"
+            content="League of legends champions stats by champion role for the current patch - lolbaron.com"
           />
           <meta
             property="og:description"

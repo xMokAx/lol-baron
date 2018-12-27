@@ -64,7 +64,7 @@ class summoner extends Component {
         <Head>
           <title>
             {summonerInfo.name} - {selectedRegion} - LOL match history and stats
-            - lolmania.com
+            - lolbaron.com
           </title>
           <meta
             key="desc"
@@ -73,7 +73,7 @@ class summoner extends Component {
           />
           <meta
             property="og:title"
-            content={`League of legends, ${selectedRegion}, ${selectedSummoner} match history and stats - lolmania.com`}
+            content={`League of legends, ${selectedRegion}, ${selectedSummoner} match history and stats - lolbaron.com`}
           />
           <meta
             property="og:description"

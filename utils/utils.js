@@ -4,7 +4,7 @@ export function getKeyByValue(object, value) {
 
 export function getValueByProp(object, prop, value) {
   const key = Object.keys(object).find(
-    key => object[key][prop].toLowerCase().replace(/([ &])/gi, "") === value
+    key => object[key][prop].toLowerCase().replace(/([^a-z])/gi, "") === value
   );
   return object[key];
 }

@@ -26,47 +26,70 @@ const ChampBuild = ({ roleData, champ, version }) => {
     <React.Fragment>
       <div className="column is-12-mobile is-6-tablet is-6-desktop has-border-right">
         <TitleMain title="Highest Win Rate Build" />
-        <ChampSummoners title="Summoners" data={summonershash.highestWinrate} />
-        <ChampRunes data={runehash.highestWinrate} />
-        <ChampTrinket title="Trinket" data={trinkethash.highestWinrate} />
-        <ChampStartingItems
-          title="Starting Items"
-          data={firstitemshash.highestWinrate}
-        />
-        <ChampItems
-          title="Completed Items"
-          data={
-            finalitemshashfixed.highestWinrate
-              ? finalitemshashfixed.highestWinrate
-              : finalitemshashfixed.highestCount
-          }
-        />
-        <ChampSkills
-          version={version}
-          title="Skill Order"
-          data={skillorderhash.highestWinrate}
-          champ={champ}
-        />
+        {summonershash && (
+          <ChampSummoners
+            title="Summoners"
+            data={summonershash.highestWinrate}
+          />
+        )}
+        {runehash && <ChampRunes data={runehash.highestWinrate} />}
+        {trinkethash && (
+          <ChampTrinket title="Trinket" data={trinkethash.highestWinrate} />
+        )}
+        {firstitemshash && (
+          <ChampStartingItems
+            title="Starting Items"
+            data={firstitemshash.highestWinrate}
+          />
+        )}
+        {finalitemshashfixed && (
+          <ChampItems
+            title="Completed Items"
+            data={
+              finalitemshashfixed.highestWinrate
+                ? finalitemshashfixed.highestWinrate
+                : finalitemshashfixed.highestCount
+            }
+          />
+        )}
+        {skillorderhash && (
+          <ChampSkills
+            version={version}
+            title="Skill Order"
+            data={skillorderhash.highestWinrate}
+            champ={champ}
+          />
+        )}
       </div>
       <div className="column is-12-mobile is-6-tablet is-6-desktop has-border-right">
         <TitleMain title="Most Frequent Build" />
-        <ChampSummoners title="Summoners" data={summonershash.highestCount} />
-        <ChampRunes data={runehash.highestCount} />
-        <ChampTrinket title="Trinket" data={trinkethash.highestCount} />
-        <ChampStartingItems
-          title="Starting Items"
-          data={firstitemshash.highestCount}
-        />
-        <ChampItems
-          title="Completed Items"
-          data={finalitemshashfixed.highestCount}
-        />
-        <ChampSkills
-          version={version}
-          title="Skill Order"
-          data={skillorderhash.highestCount}
-          champ={champ}
-        />
+        {summonershash && (
+          <ChampSummoners title="Summoners" data={summonershash.highestCount} />
+        )}
+        {runehash && <ChampRunes data={runehash.highestCount} />}
+        {trinkethash && (
+          <ChampTrinket title="Trinket" data={trinkethash.highestCount} />
+        )}
+        {firstitemshash && (
+          <ChampStartingItems
+            title="Starting Items"
+            data={firstitemshash.highestCount}
+          />
+        )}
+        {finalitemshashfixed && (
+          <ChampItems
+            title="Completed Items"
+            data={finalitemshashfixed.highestCount}
+          />
+        )}
+        {skillorderhash && (
+          <ChampSkills
+            version={version}
+            title="Skill Order"
+            data={skillorderhash.highestCount}
+            champ={champ}
+          />
+        )}
       </div>
     </React.Fragment>
   );

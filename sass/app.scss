@@ -1,4 +1,4 @@
-.App-logo {
+.App-logo-animation {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -11,6 +11,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+// logo
+.logo-image {
+  width: 128px;
+  height: 128px;
 }
 
 // html
@@ -464,7 +470,7 @@ active {
   border: 0;
   white-space: normal;
   height: 90px;
-  background-color: #009b84; // #00826e
+  background-color: #9255cc;
 }
 
 .table-button:disabled {
@@ -472,11 +478,11 @@ active {
 }
 
 .table-button:hover:not(:disabled) {
-  background-color: #00826e;
+  background-color: #804cb5;
 }
 
 .table-button.is-selected:not(:disabled) {
-  background-color: #006858;
+  background-color: #6b4099;
 }
 
 .sticky-heading {
@@ -781,6 +787,22 @@ active {
 }
 
 @media only screen and (max-width: 768px) {
+  .app-logo {
+    height: 120px;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-image {
+    width: auto;
+    height: auto;
+    max-width: 128px;
+    max-width: 128px;
+  }
+
   .champ-item-width {
     width: 98px;
   }

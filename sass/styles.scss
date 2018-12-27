@@ -279,6 +279,7 @@
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 @import "../node_modules/bulma/sass/utilities/functions";
 // General colors
+$primary: $purple;
 $background: $black-bis;
 $warning: $yellow;
 $dark: $grey-darker;
@@ -289,14 +290,14 @@ $text-invert: findColorInvert($text);
 $text-light: $grey-light;
 $text-strong: $white;
 // link colors
-$turquoise-invert:findColorInvert($turquoise);
-$link: $turquoise;
-$link-invert: $turquoise-invert;
+$purple-invert:findColorInvert($purple);
+$link: $purple;
+$link-invert: $purple-invert;
 $link-visited: $purple;
 $link-hover: $white;
 $link-hover-border: $grey;
 $link-focus: $white;
-$link-focus-border: $turquoise;
+$link-focus-border: $purple;
 $link-active: $white;
 $link-active-border: $grey-lighter;
 // border
