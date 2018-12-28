@@ -7,6 +7,7 @@ import Tippy from "@tippy.js/react";
 
 import { ggRoles } from "../../constants/ggConstants";
 import { regions } from "../../constants/lolConstants";
+import { getKeyByValue } from "../../utils/utils";
 
 import ItemImage from "../common/ItemImage";
 import EmptyImage from "../common/EmptyImage";
@@ -72,7 +73,7 @@ function MatchDetailsItem({
   const champ = champsList.find(champion => champion.id == championId);
   const role = champ ? ggRoles[champ.roles[0].role] : "";
   const champName = champion.gameName.replace(/([^a-z]+)/gi, "").toLowerCase();
-  const region = regions[currentPlatformId.toLowerCase()];
+  const region = getKeyByValue(regions, currentPlatformId.toLowerCase());
   let kda;
   if (deaths === 0) {
     if (kills !== 0 || assists !== 0) {
