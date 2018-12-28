@@ -103,10 +103,10 @@ class ChampsAutoComplete extends Component {
           {!isFetchingChampsList && !isModal && (
             <div className="control">
               <button
-                aria-label="search summoner"
+                aria-label="search champion"
                 type="submit"
                 className={classNames(
-                  "button has-text-dark",
+                  "button search-button",
                   hasError ? "is-danger" : "is-primary"
                 )}
               >

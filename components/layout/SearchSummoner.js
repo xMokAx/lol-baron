@@ -74,6 +74,7 @@ class SearchSummoner extends Component {
                 defaultValue={selectedRegion}
                 ariaLabel="select region"
                 ref={node => (this.Select = node)}
+                className="select-region-vs"
               />
             </div>
           </div>
@@ -96,7 +97,7 @@ class SearchSummoner extends Component {
               aria-label="search summoner"
               type="submit"
               className={classNames(
-                "button has-text-dark",
+                "button search-button",
                 summonerQueryError ? "is-danger" : "is-primary"
               )}
             >

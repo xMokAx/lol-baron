@@ -11,9 +11,9 @@ function Footer() {
           created by <a href="https://github.com/xMokAx">Ahmed Mokhtar</a>.
         </p>
         <p>
-          Powered by <a href="https://champion.gg">Champion.gg</a>{" "}
-          <a href="http://api.champion.gg/" className="has-text-white">
-            API
+          Powered By <a href="http://api.champion.gg/">Champion.gg API</a> and{" "}
+          <a href="https://developer.riotgames.com/">
+            League Of Legends Official API
           </a>
         </p>
         <p className="is-size-7 has-text-grey-light">

@@ -13,12 +13,6 @@
   }
 }
 
-// logo
-.logo-image {
-  width: 128px;
-  height: 128px;
-}
-
 // html
 html {
   // to allow scrolling horizontally in statistics page
@@ -167,6 +161,10 @@ active {
 }
 
 // generic
+.is-relative {
+  position: relative;
+}
+
 .pd-s {
   padding: 4px;
 }
@@ -500,7 +498,8 @@ active {
 }
 
 .transition-up:hover {
-  box-shadow: 0 3rem 3rem -1.25rem rgba(0, 0, 0, 0.7);
+  // box-shadow: 0 3rem 3rem -1.25rem rgba(0, 0, 0, 0.7);
+  // box-shadow: 0 0 3px 3px rgba($black, 0.5);
   transform: translateY(-0.5rem);
 }
 
@@ -790,7 +789,7 @@ active {
   .app-logo {
     height: 120px;
     position: absolute;
-    top: 64px;
+    top: 0;
     left: 0;
     display: flex;
     align-items: center;
@@ -799,8 +798,7 @@ active {
   .logo-image {
     width: auto;
     height: auto;
-    max-width: 128px;
-    max-width: 128px;
+    max-width: 120px;
   }
 
   .champ-item-width {
@@ -934,6 +932,20 @@ active {
 
   .overview-champ {
     width: 50px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .select-region-vs {
+    width: 80px
+  }
+
+  .search-column {
+    padding-left: 4px
+  }
+
+  .search-button {
+    width: 36px
   }
 }
 

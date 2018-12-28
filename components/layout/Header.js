@@ -167,11 +167,8 @@ class Header extends Component {
           </div>
         </nav>
 
-        <div
-          className="columns is-marginless is-mobile is-multiline is-centered has-background-black-ter is-size-6-7 is-size-7-mobile is-size-6-tablet flex-align-center has-text-centered"
-          style={{ paddingTop: "12px" }}
-        >
-          <div className="column is-offset-2-mobile is-10-mobile is-5-tablet">
+        <div className="columns is-marginless is-mobile is-multiline is-centered has-background-black-ter is-size-6-7 is-size-7-mobile is-size-6-tablet flex-align-center has-text-centered is-relative">
+          <div className="column is-offset-2-mobile is-10-mobile is-5-tablet search-column">
             <SearchSummoner />
           </div>
 
@@ -184,7 +181,7 @@ class Header extends Component {
             </figure>
           </div>
 
-          <div className="column is-offset-2-mobile is-10-mobile is-5-tablet">
+          <div className="column is-offset-2-mobile is-10-mobile is-5-tablet search-column">
             <SearchChamp />
           </div>
 

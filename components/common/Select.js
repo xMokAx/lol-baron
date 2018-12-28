@@ -7,13 +7,21 @@ export default class Select extends Component {
     ariaLabel: PropTypes.string.isRequired,
     value: PropTypes.string,
     defaultValue: PropTypes.string,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    className: PropTypes.string
   };
   render() {
-    const { options, ariaLabel, value, defaultValue, onChange } = this.props;
+    const {
+      options,
+      ariaLabel,
+      value,
+      defaultValue,
+      onChange,
+      className
+    } = this.props;
     return (
       <select
-        className="is-capitalized"
+        className={`is-capitalized ${className}`}
         value={value}
         defaultValue={defaultValue}
         aria-label={ariaLabel}

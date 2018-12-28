@@ -8,19 +8,19 @@ class Home extends Component {
         <Head>
           <title>
             Lol statistics, builds, runes, skill orders, counters, summoner
-            match history - lolbaron.com
+            match history - lolmania.com
           </title>
           <meta
             name="description"
-            content="lolbaron.com provides League of Legends champion statistics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history, match details and stats."
+            content="Lolmania.com provides League of Legends champion statistics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history, match details and stats."
           />
           <meta
             property="og:title"
-            content="Lol statistics, analytics, builds, runes, skill orders, counters, summoner match history - lolbaron.com"
+            content="Lol statistics, analytics, builds, runes, skill orders, counters, summoner match history - lolmania.com"
           />
           <meta
             property="og:description"
-            content="lolbaron.com provides League of Legends champion statistics, analytics, guides, builds, runes, skill orders and counters - summoner match history, match details and stats."
+            content="lolmania.com provides League of Legends champion statistics, analytics, guides, builds, runes, skill orders and counters - summoner match history, match details and stats."
           />
           <meta
             property="og:image"
@@ -47,10 +47,10 @@ class Home extends Component {
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <h3 className="title is-4 is-size-5-mobile">Match History</h3>
-                <h4 className="subtitle is-6 is-size-7-mobile">
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">Match History</h2>
+                <p className="subtitle is-6 is-size-7-mobile">
                   Summoner Match History, Ranks, Statistics and Details
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -66,9 +66,9 @@ class Home extends Component {
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <p className="title is-4 is-size-5-mobile">
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">
                   Champion Analytics
-                </p>
+                </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Win Rate, Best Build, Best Runes, Matchups And More!
                 </p>
@@ -87,9 +87,9 @@ class Home extends Component {
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <p className="title is-4 is-size-5-mobile">
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">
                   Champions Statistics
-                </p>
+                </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Sortable And Filterable Data Table Comparing All Champs Stats
                 </p>
@@ -108,7 +108,7 @@ class Home extends Component {
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <p className="title is-4 is-size-5-mobile">Champions List</p>
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">Champions List</h2>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Champs List With Their Currently Played Roles For Each Elo
                 </p>
@@ -127,7 +127,7 @@ class Home extends Component {
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <p className="title is-4 is-size-5-mobile">Set Preferences</p>
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">Set Preferences</h2>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Set Your Prefered: Region, Summoner, Champ And Elo
                 </p>
@@ -146,9 +146,9 @@ class Home extends Component {
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <p className="title is-4 is-size-5-mobile">
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">
                   Data Saving And Speed
-                </p>
+                </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
                   Any Searched Summoners Or Champs Are Stored In Tabs
                 </p>
