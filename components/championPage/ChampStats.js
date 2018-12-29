@@ -102,7 +102,7 @@ const ChampStats = ({ champName, roleData }) => {
   return (
     <div className="column is-12-mobile is-9-tablet is-8-desktop has-border-right">
       <TitleMain title="Statistics" />
-      <table className="table is-striped is-fullwidth has-text-weight-semibold is-size-7-mobile is-size-6-7">
+      <table className="table is-striped is-fullwidth has-text-weight-semibold is-size-7-mobile is-size-6-7 is-size-6-desktop">
         <thead>
           <tr className="has-background-dark">
             <th className="has-text-left">Type</th>
