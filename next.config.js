@@ -1,20 +1,11 @@
 const withPlugins = require("next-compose-plugins");
 const withSass = require("@zeit/next-sass");
 const withCss = require("@zeit/next-css");
-const withOptimizedImages = require("next-optimized-images");
 const withOffline = require("next-offline");
 
 module.exports = withPlugins([
   withCss,
   withSass,
-  [
-    withOptimizedImages,
-    {
-      optipng: {
-        optimizationLevel: 4
-      }
-    }
-  ],
   [
     withOffline,
     {

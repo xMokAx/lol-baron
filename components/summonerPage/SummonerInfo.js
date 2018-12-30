@@ -131,28 +131,26 @@ class SummonerInfo extends Component {
           ) : summonerRank.length ? (
             summonerRank.map(rank => {
               let rankType = queueType[rank.queueType];
+              const rankName =
+                rank.tier === "MASTER" ||
+                rank.tier === "CHALLENGER" ||
+                rank.tier === "GRANDMASTER"
+                  ? rank.tier
+                  : `${rank.tier} ${rank.rank}`;
               return (
                 <div className="column is-narrow" key={rank.queueType}>
                   <div className="is-flex flex-wrap flex-justify-center">
-                    <div>
-                      <Image
-                        tooltip={true}
-                        src={`/static/images/emblems/${rank.tier.toLowerCase()}_Emblem.png`}
-                        alt={`${rank.tier} ${rank.rank} (${
-                          rank.leaguePoints
-                        } pts)`}
-                        className="image is-64x64"
-                        imgStyle="border-radius-4"
-                      />
-                    </div>
+                    <Image
+                      tooltip={true}
+                      src={`/static/images/emblems/${rank.tier.toLowerCase()}_Emblem.png`}
+                      alt={`${rankName} (${rank.leaguePoints} pts)`}
+                      className="image is-64x64"
+                      imgStyle="border-radius-4"
+                    />
                     <div className="is-flex flex-vertical">
                       <div className="pd-1">
                         <strong>{rankType} </strong>
-                        <strong className="tag is-primary">
-                          {rank.tier === "MASTER" || rank.tier === "CHALLENGER"
-                            ? rank.tier
-                            : `${rank.tier} ${rank.rank}`}
-                        </strong>
+                        <strong className="tag is-primary">{rankName}</strong>
                       </div>
                       <div>
                         <span className="tag is-info">Wins: {rank.wins}</span>{" "}

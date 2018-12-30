@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Link from "next/link";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 
 import {
   selectRegion,
@@ -14,13 +13,6 @@ import {
 import SummonerInfo from "../components/summonerPage/SummonerInfo";
 import Loading from "../components/common/Loading";
 import MatchesList from "../components/summonerPage/MatchesList";
-// const MatchesList = dynamic(import("../components/summonerPage/MatchesList"), {
-//   loading: () => (
-//     <div className="column is-12">
-//       <Loading className="loader-lg mgx-auto loader-color-light" />
-//     </div>
-//   )
-// });
 
 class summoner extends Component {
   static proptypes = {

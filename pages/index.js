@@ -49,7 +49,7 @@ class Home extends Component {
                       <img
                         className="border-radius-6"
                         src="/static/images/home-page/summoner-page.png"
-                        alt="summoner page"
+                        alt="summoner history page"
                       />
                     </figure>
                   </div>
@@ -78,7 +78,7 @@ class Home extends Component {
                       <img
                         className="border-radius-6"
                         src="/static/images/home-page/champs-page.png"
-                        alt="summoner page"
+                        alt="chams list page"
                       />
                     </figure>
                   </div>
@@ -108,7 +108,7 @@ class Home extends Component {
                       <img
                         className="border-radius-6"
                         src="/static/images/home-page/champ-page.png"
-                        alt="summoner page"
+                        alt="champs analytics page"
                       />
                     </figure>
                   </div>
@@ -141,7 +141,7 @@ class Home extends Component {
                       <img
                         className="border-radius-6"
                         src="/static/images/home-page/stats-page.png"
-                        alt="summoner page"
+                        alt="statistics page"
                       />
                     </figure>
                   </div>
@@ -165,7 +165,7 @@ class Home extends Component {
                   <img
                     className="border-radius-6"
                     src="/static/images/home-page/pref.png"
-                    alt="summoner page"
+                    alt="preferences modal"
                   />
                 </figure>
               </div>
@@ -186,7 +186,7 @@ class Home extends Component {
                   <img
                     className="border-radius-6"
                     src="/static/images/home-page/data-saving.png"
-                    alt="summoner page"
+                    alt="stored tabs"
                   />
                 </figure>
               </div>

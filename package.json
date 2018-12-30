@@ -1,5 +1,5 @@
 {
-  "name": "lol-mania-next",
+  "name": "lol-next",
   "version": "1.0.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./server/server.js --watch ./server/server.js",
@@ -48,11 +48,8 @@
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "^9.4.2",
     "cssnano": "^4.1.7",
-    "imagemin-optipng": "^6.0.0",
     "next-compose-plugins": "^2.1.1",
     "next-offline": "^3.2.2",
-    "next-optimized-images": "^2.0.2",
-    "node-sass": "^4.11.0",
-    "pm2": "^3.2.4"
+    "node-sass": "^4.11.0"
   }
 }
