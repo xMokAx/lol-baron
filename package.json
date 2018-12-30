@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./server/server.js --watch ./server/server.js",
     "build": "next build",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./server/server.js --watch ./server/server.js",
     "start": "cross-env NODE_ENV=production node ./server/server.js",
     "restart": "pm2 startOrRestart ecosystem.config.js",
     "deploy": "pm2 deploy ecosystem.config.js production"
