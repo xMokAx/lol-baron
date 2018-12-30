@@ -27,7 +27,7 @@ const OverviewTable = ({
             <th className="has-text-danger">{headers[1]}</th>
           </tr>
         </thead>
-        <tbody className="is-size-7-mobile is-size-6-7 is-size-6-desktop text-vsm">
+        <tbody className="is-size-7-mobile is-size-6-7 is-size-6-widescreen text-vsm">
           {data.length
             ? roles.map((role, i) => {
                 const { best, worst } = data[i];
