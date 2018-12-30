@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 class Home extends Component {
   render() {
@@ -36,88 +37,126 @@ class Home extends Component {
         </p>
         <div className="columns is-centered is-multiline is-marginless">
           <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/summoner-page.png"
-                    alt="summoner page"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                  Match History
-                </h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Summoner Match History, Ranks, Statistics and Details.
-                </p>
-              </div>
-            </div>
+            <Link
+              href={"/summoner?region=kr&summonerName=hideonbush"}
+              as={"/summoner/kr/hideonbush"}
+              scroll={false}
+            >
+              <a>
+                <div className="card border-radius-6 transition-up">
+                  <div className="card-image">
+                    <figure className="image is-2by1">
+                      <img
+                        className="border-radius-6"
+                        src="/static/images/home-page/summoner-page.png"
+                        alt="summoner page"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content pd-12">
+                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                      Match History
+                    </h2>
+                    <p className="subtitle is-6 is-size-7-mobile">
+                      Summoner Match History, Ranks, Statistics and Details.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/champs-page.png"
-                    alt="summoner page"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                  Champions List
-                </h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Champs List With Their Currently Played Roles For Each Elo.
-                </p>
-              </div>
-            </div>
+            <Link
+              href={"/champions?elo=platplus"}
+              as={"/champions/platplus"}
+              scroll={false}
+            >
+              <a>
+                <div className="card border-radius-6 transition-up">
+                  <div className="card-image">
+                    <figure className="image is-2by1">
+                      <img
+                        className="border-radius-6"
+                        src="/static/images/home-page/champs-page.png"
+                        alt="summoner page"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content pd-12">
+                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                      Champions List
+                    </h2>
+                    <p className="subtitle is-6 is-size-7-mobile">
+                      Champs List With Their Currently Played Roles For Each
+                      Elo.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/champ-page.png"
-                    alt="summoner page"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                  Champion Analytics
-                </h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Win Rate, Best Build, Best Runes, Matchups And More!
-                </p>
-              </div>
-            </div>
+            <Link
+              href={"/champion?elo=platplus&champName=zed&role=middle"}
+              as={"/champions/platplus/zed/middle"}
+              scroll={false}
+            >
+              <a>
+                <div className="card border-radius-6 transition-up">
+                  <div className="card-image">
+                    <figure className="image is-2by1">
+                      <img
+                        className="border-radius-6"
+                        src="/static/images/home-page/champ-page.png"
+                        alt="summoner page"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content pd-12">
+                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                      Champion Analytics
+                    </h2>
+                    <p className="subtitle is-6 is-size-7-mobile">
+                      Win Rate, Best Build, Best Runes, Matchups And More!
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/stats-page.png"
-                    alt="summoner page"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                  Champions Statistics
-                </h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Sortable And Filterable Data Table Comparing All Champs Stats.
-                </p>
-              </div>
-            </div>
+            <Link
+              href={
+                "/statistics?elo=platplus&sortBy=winRate&order=descend&roleFilter=all"
+              }
+              as={
+                "/statistics/platplus?sortBy=winRate&order=descend&roleFilter=all"
+              }
+              scroll={false}
+            >
+              <a>
+                <div className="card border-radius-6 transition-up">
+                  <div className="card-image">
+                    <figure className="image is-2by1">
+                      <img
+                        className="border-radius-6"
+                        src="/static/images/home-page/stats-page.png"
+                        alt="summoner page"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content pd-12">
+                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                      Champions Statistics
+                    </h2>
+                    <p className="subtitle is-6 is-size-7-mobile">
+                      Sortable And Filterable Data Table Comparing All Champs
+                      Stats.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="column is-half-tablet is-one-third-desktop">
             <div className="card border-radius-6 transition-up">
