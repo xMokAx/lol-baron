@@ -41,15 +41,17 @@ class Home extends Component {
                 <figure className="image is-2by1">
                   <img
                     className="border-radius-6"
-                    src="/static/images/home-page/1280x960.png"
+                    src="/static/images/home-page/summoner-page.png"
                     alt="summoner page"
                   />
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">Match History</h2>
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                  Match History
+                </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
-                  Summoner Match History, Ranks, Statistics and Details
+                  Summoner Match History, Ranks, Statistics and Details.
                 </p>
               </div>
             </div>
@@ -60,7 +62,28 @@ class Home extends Component {
                 <figure className="image is-2by1">
                   <img
                     className="border-radius-6"
-                    src="/static/images/home-page/1280x960.png"
+                    src="/static/images/home-page/champs-page.png"
+                    alt="summoner page"
+                  />
+                </figure>
+              </div>
+              <div className="card-content pd-12">
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                  Champions List
+                </h2>
+                <p className="subtitle is-6 is-size-7-mobile">
+                  Champs List With Their Currently Played Roles For Each Elo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column is-half-tablet is-one-third-desktop">
+            <div className="card border-radius-6 transition-up">
+              <div className="card-image">
+                <figure className="image is-2by1">
+                  <img
+                    className="border-radius-6"
+                    src="/static/images/home-page/champ-page.png"
                     alt="summoner page"
                   />
                 </figure>
@@ -81,7 +104,7 @@ class Home extends Component {
                 <figure className="image is-2by1">
                   <img
                     className="border-radius-6"
-                    src="/static/images/home-page/1280x960.png"
+                    src="/static/images/home-page/stats-page.png"
                     alt="summoner page"
                   />
                 </figure>
@@ -91,7 +114,7 @@ class Home extends Component {
                   Champions Statistics
                 </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
-                  Sortable And Filterable Data Table Comparing All Champs Stats
+                  Sortable And Filterable Data Table Comparing All Champs Stats.
                 </p>
               </div>
             </div>
@@ -102,15 +125,17 @@ class Home extends Component {
                 <figure className="image is-2by1">
                   <img
                     className="border-radius-6"
-                    src="/static/images/home-page/1280x960.png"
+                    src="/static/images/home-page/pref.png"
                     alt="summoner page"
                   />
                 </figure>
               </div>
               <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">Champions List</h2>
+                <h2 className="title is-4 is-size-5-mobile has-text-primary">
+                  Set Preferences
+                </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
-                  Champs List With Their Currently Played Roles For Each Elo
+                  Set Your Prefered: Region, Summoner, Champ And Elo.
                 </p>
               </div>
             </div>
@@ -121,26 +146,7 @@ class Home extends Component {
                 <figure className="image is-2by1">
                   <img
                     className="border-radius-6"
-                    src="/static/images/home-page/1280x960.png"
-                    alt="summoner page"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">Set Preferences</h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Set Your Prefered: Region, Summoner, Champ And Elo
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/1280x960.png"
+                    src="/static/images/home-page/data-saving.png"
                     alt="summoner page"
                   />
                 </figure>
@@ -150,7 +156,7 @@ class Home extends Component {
                   Data Saving And Speed
                 </h2>
                 <p className="subtitle is-6 is-size-7-mobile">
-                  Any Searched Summoners Or Champs Are Stored In Tabs
+                  Any Searched Summoners Or Champs Are Stored For Future Visits.
                 </p>
               </div>
             </div>

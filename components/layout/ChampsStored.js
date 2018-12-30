@@ -9,7 +9,7 @@ import { ggRoles } from "../../constants/ggConstants";
 
 import ChampImage from "../common/ChampImage";
 
-const ChampsStored = ({ eloDetailsByElo, router }) => {
+const ChampsStored = ({ eloDetailsByElo, champs, router }) => {
   const storedElos = Object.keys(eloDetailsByElo);
   return (
     <div className="is-flex flex-wrap flex-justify-center has-text-centered">
@@ -38,17 +38,16 @@ const ChampsStored = ({ eloDetailsByElo, router }) => {
                   {storedChampions.map((entry, i) => {
                     const champName = entry[0];
                     const champion = entry[1];
+                    const { id } = champion;
+                    const champ = champs[id];
+                    const { gameName } = champ;
                     const { champError, isFetchingChamp } = champion;
 
                     if (!isFetchingChamp) {
-                      const { id } = champion;
                       let role = champion.selectedRole;
-                      const champLink = champName
-                        .replace(/([^a-z]+)/gi, "")
-                        .toLowerCase();
                       role = ggRoles[role];
                       const selected = router.asPath.includes(
-                        `/champion/${elo}/${champLink}`
+                        `/champion/${elo}/${champName}`
                       );
                       const champColor = selected
                         ? champError
@@ -64,8 +63,8 @@ const ChampsStored = ({ eloDetailsByElo, router }) => {
                         >
                           <Link
                             scroll={false}
-                            href={`/champion?elo=${elo}&champName=${champLink}&role=${role}`}
-                            as={`/champion/${elo}/${champLink}/${role}`}
+                            href={`/champion?elo=${elo}&champName=${champName}&role=${role}`}
+                            as={`/champion/${elo}/${champName}/${role}`}
                           >
                             <a className={champColor}>
                               <div className="is-flex">
@@ -79,7 +78,7 @@ const ChampsStored = ({ eloDetailsByElo, router }) => {
                                 </div>
                                 <div className="is-flex flex-vertical flex-justify-center is-capitalized">
                                   <p>
-                                    <strong>{champName}</strong>
+                                    <strong>{gameName}</strong>
                                     <br />
                                     <small>{role}</small>
                                   </p>
@@ -113,13 +112,15 @@ const ChampsStored = ({ eloDetailsByElo, router }) => {
 
 ChampsStored.propTypes = {
   router: PropTypes.object.isRequired,
-  eloDetailsByElo: PropTypes.object.isRequired
+  eloDetailsByElo: PropTypes.object.isRequired,
+  champs: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => {
-  const { eloDetailsByElo } = state;
+  const { eloDetailsByElo, champs } = state;
   return {
-    eloDetailsByElo
+    eloDetailsByElo,
+    champs
   };
 };
 

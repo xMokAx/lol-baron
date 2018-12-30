@@ -382,14 +382,12 @@ $tabs-boxed-link-active-border-color: $border-hover;
 // card
 $card-color: $text;
 $card-background-color: $black-bis;
-$card-shadow: 0 2px 3px rgba($white, 0.1),
-0 0 0 1px rgba($white, 0.1);
+$card-shadow: 0 0 3px 3px rgba($black, 0.5);
 $card-header-color: $text-strong;
 $card-header-shadow: 0 1px 2px rgba($white, 0.1);
 // box
 $box-background-color: $black-bis;
-$box-shadow: 0 2px 3px rgba($white, 0.1),
-0 0 0 1px rgba($white, 0.1);
+$box-shadow: 0 0 3px 3px rgba($black, 0.5);
 $box-link-hover-shadow: 0 2px 3px rgba($white, 0.1),
 0 0 0 1px $link;
 $box-link-active-shadow: inset 0 1px 2px rgba($white, 0.2),
