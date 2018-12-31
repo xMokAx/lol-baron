@@ -110,7 +110,7 @@ class champion extends Component {
           />
           <meta
             property="og:image"
-            content={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${gameName}_0.jpg`}
+            content={`https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${gameName}_0.jpg`}
           />
         </Head>
         {isFetchingChamp ? (

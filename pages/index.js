@@ -25,7 +25,7 @@ class Home extends Component {
           />
           <meta
             property="og:image"
-            content="https://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/Olaf.png"
+            content="http://ec2-18-196-101-204.eu-central-1.compute.amazonaws.com/static/favicon/android-chrome-256x256.png"
           />
         </Head>
         <h1 className="title is-3 is-size-4-mobile has-text-warning">
