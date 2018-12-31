@@ -54,7 +54,7 @@ class overview extends Component {
           />
           <meta
             property="og:image"
-            content="http://ec2-18-196-101-204.eu-central-1.compute.amazonaws.com/static/favicon/android-chrome-256x256.png"
+            content="http://ec2-18-196-101-204.eu-central-1.compute.amazonaws.com/static/favicon/og-image.jpg"
           />
         </Head>
         {isFetchingOverall ? (
