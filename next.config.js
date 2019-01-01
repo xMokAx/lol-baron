@@ -32,7 +32,7 @@ module.exports = withPlugins([
             }
           },
           {
-            urlPattern: /(http:\/\/localhost:3000\/)|((\/)(champions|champion|overview|statistics)(\/)(platplus|platinum|gold|silver|bronze))|((\/summoner\/)(eune|euwest|na|ru|br|kr|jp|tr|lan|las|oce|pbe))/gi,
+            urlPattern: /(https:\/\/lolbaron.com\/)|((\/)(champions|champion|overview|statistics)(\/)(platplus|platinum|gold|silver|bronze))|((\/summoner\/)(eune|euwest|na|ru|br|kr|jp|tr|lan|las|oce|pbe))/gi,
             handler: "networkFirst",
             options: {
               cacheName: "html-pages",
