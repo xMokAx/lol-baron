@@ -17,7 +17,8 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://lolbaron.com/",
+    "start_url": "/",
+    "scope": "../",
     "theme_color": "#b86bff",
     "background_color": "#ffffff",
     "display": "standalone"
