@@ -43,7 +43,6 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps, reduxStore, router } = this.props;
-    console.log("from app", router);
 
     return (
       <Container>
