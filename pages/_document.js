@@ -12,6 +12,10 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0"
           />
           <meta property="og:site_name" content="lolbaron.com" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://lolbaron.com/" />
+          <meta property="og:image:width" content="600" />
+          <meta property="og:image:height" content="314" />
           <meta
             name="keywords"
             content="League of Legends, lol, champion, statistics, analytics, guides, builds, runes, skill orders, matchup,counters, summoner, match history"

@@ -73,7 +73,7 @@ class summoner extends Component {
           />
           <meta
             property="og:image"
-            content="http://ec2-18-196-101-204.eu-central-1.compute.amazonaws.com/static/favicon/og-image.jpg"
+            content="/static/favicon/og-wide-image.png"
           />
         </Head>
         {isFetchingSummoner ? (
