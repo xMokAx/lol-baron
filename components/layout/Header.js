@@ -63,6 +63,7 @@ class Header extends Component {
     const filterRole =
       rolesFilter === "SHOW_ALL" ? "all" : ggRoles[rolesFilter];
     const { isMenuOpened } = this.state;
+    const { toggleMenu } = this;
     return (
       <header className="hero-head">
         <nav
@@ -88,7 +89,7 @@ class Header extends Component {
                 "is-active": isMenuOpened
               })}
               style={{ height: "3.25rem", marginLeft: "auto" }}
-              onClick={this.toggleMenu}
+              onClick={toggleMenu}
               aria-label="toggle menu"
               tabIndex="1"
             >
@@ -103,7 +104,6 @@ class Header extends Component {
             className={classNames("navbar-menu", {
               "is-active": isMenuOpened
             })}
-            tabIndex="1"
           >
             <hr className="dropdown-divider" />
             <Link href="/">
