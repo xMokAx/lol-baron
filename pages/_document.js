@@ -13,7 +13,6 @@ export default class MyDocument extends Document {
           />
           <meta property="og:site_name" content="lolbaron.com" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://lolbaron.com/" />
           <meta property="og:image:width" content="600" />
           <meta property="og:image:height" content="314" />
           <meta

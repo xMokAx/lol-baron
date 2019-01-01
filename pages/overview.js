@@ -54,7 +54,7 @@ class overview extends Component {
           />
           <meta
             property="og:image"
-            content="/static/favicon/og-wide-image.png"
+            content="https://lolbaron.com/static/favicon/og-wide-image.png"
           />
         </Head>
         {isFetchingOverall ? (

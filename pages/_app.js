@@ -1,6 +1,7 @@
 import App, { Container } from "next/app";
 import ErrorPage from "next/error";
 import Head from "next/head";
+import { withRouter } from "next/router";
 import React from "react";
 import { Provider } from "react-redux";
 
@@ -41,15 +42,24 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps, reduxStore } = this.props;
+    const { Component, pageProps, reduxStore, router } = this.props;
+    console.log("from app", router);
 
     return (
       <Container>
-        {pageProps.statusCode && (
+        {pageProps.statusCode ? (
           <Head>
             <meta
               name="description"
               content="lolbaron.com provides League of Legends champion statistics, analytics, guides, builds, items, spells, runes, skill orders, counters, matchups - summoner match history and stats"
+            />
+            <meta property="og:url" content="https://lolbaron.com/" />
+          </Head>
+        ) : (
+          <Head>
+            <meta
+              property="og:url"
+              content={`https://lolbaron.com${router.asPath}`}
             />
           </Head>
         )}
@@ -67,4 +77,4 @@ class MyApp extends App {
   }
 }
 
-export default withReduxStore(MyApp);
+export default withRouter(withReduxStore(MyApp));

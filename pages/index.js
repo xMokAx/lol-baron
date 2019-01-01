@@ -25,7 +25,7 @@ class Home extends Component {
           />
           <meta
             property="og:image"
-            content="/static/favicon/og-wide-image.png"
+            content="https://lolbaron.com/static/favicon/og-wide-image.png"
           />
         </Head>
         <h1 className="title is-3 is-size-4-mobile has-text-warning">
