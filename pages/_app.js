@@ -1,9 +1,11 @@
+import React from "react";
 import App, { Container } from "next/app";
 import ErrorPage from "next/error";
 import Head from "next/head";
 import { withRouter } from "next/router";
-import React from "react";
 import { Provider } from "react-redux";
+import Router from "next/router";
+import withGA from "next-ga";
 
 import withReduxStore from "../lib/with-redux-store";
 import "../sass/styles.scss";
@@ -76,4 +78,6 @@ class MyApp extends App {
   }
 }
 
-export default withRouter(withReduxStore(MyApp));
+export default withGA("UA-131564404-1", Router)(
+  withRouter(withReduxStore(MyApp))
+);
