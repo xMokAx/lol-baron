@@ -382,12 +382,12 @@ $tabs-boxed-link-active-border-color: $border-hover;
 // card
 $card-color: $text;
 $card-background-color: $black-bis;
-$card-shadow: 0 0 3px 3px rgba($black, 0.5);
+$card-shadow: 0 0 3px 3px rgba($black, 0.6);
 $card-header-color: $text-strong;
 $card-header-shadow: 0 1px 2px rgba($white, 0.1);
 // box
 $box-background-color: $black-bis;
-$box-shadow: 0 0 3px 3px rgba($black, 0.5);
+$box-shadow: 0 0 3px 3px rgba($black, 0.6);
 $box-link-hover-shadow: 0 2px 3px rgba($white, 0.1),
 0 0 0 1px $link;
 $box-link-active-shadow: inset 0 1px 2px rgba($white, 0.2),
@@ -426,8 +426,17 @@ $modal-card-head-background-color: $dark;
 $modal-card-head-border-bottom: 1px solid $border;
 $modal-card-body-background-color: $black-ter;
 $modal-card-title-color: $text-strong;
-
+// badge
 $badge-border-radius: 2px;
+// title
+$title-color: $white-ter;
+$subtitle-color: $grey-lighter;
+$subtitle-strong-color: $white-ter;
+// list
+$list-background-color: $black;
+$list-shadow: 0 0 3px 3px rgba($black, 0.6);
+// section
+$section-padding: 1rem;
 
 @import "../node_modules/bulma/sass/utilities/mixins";
 @import "../node_modules/bulma/sass/utilities/derived-variables";
@@ -457,6 +466,7 @@ $badge-border-radius: 2px;
 @import "../node_modules/bulma/sass/grid/columns";
 @import "../node_modules/bulma/sass/layout/hero";
 @import "../node_modules/bulma/sass/layout/footer";
+@import "../node_modules/bulma/sass/layout/section";
 
 
 .button.is-active {

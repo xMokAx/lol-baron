@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import Link from "next/link";
+
+import Card from "../components/homePage/Card";
 
 class Home extends Component {
   render() {
@@ -28,178 +29,67 @@ class Home extends Component {
             content="https://lolbaron.com/static/favicon/og-wide-image.png"
           />
         </Head>
-        <h1 className="title is-3 is-size-4-mobile has-text-warning">
-          First Time User ?
-        </h1>
-        <p className="mgx-2 is-size-7-mobile">
-          This App Works Offline (Any Page or Data You Browsed Before You Can
-          Browse Again Without Internet Connection But They Won't be Up To Date)
-        </p>
+        <section className="section">
+          <h1 className="title is-size-4-mobile has-text-warning">
+            First Time User ?
+          </h1>
+          <h2 className="is-size-5 is-size-6-mobile has-text-warning">
+            This Website Is A <strong>PWA (Progressive Web App)</strong> So:
+          </h2>
+          <ul className="list is-size-7-mobile">
+            <li className="list-item">
+              <p>
+                * It Works Offline (Any Page or Data You Browsed Before You Can
+                Browse Again Without Internet Connection But They may not be Up
+                To Date)
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                * It Can Be Added To Home Screen To Work As A Native Mobile App.
+              </p>
+            </li>
+          </ul>
+        </section>
         <div className="columns is-centered is-multiline is-marginless">
-          <div className="column is-half-tablet is-one-third-desktop">
-            <Link
-              href={"/summoner?region=kr&summonerName=hideonbush"}
-              as={"/summoner/kr/hideonbush"}
-              scroll={false}
-            >
-              <a>
-                <div className="card border-radius-6 transition-up">
-                  <div className="card-image">
-                    <figure className="image is-2by1">
-                      <img
-                        className="border-radius-6"
-                        src="/static/images/home-page/summoner-page.png"
-                        alt="summoner history page"
-                      />
-                    </figure>
-                  </div>
-                  <div className="card-content pd-12">
-                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                      Match History
-                    </h2>
-                    <p className="subtitle is-6 is-size-7-mobile">
-                      Summoner Match History, Ranks, Statistics and Details.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </Link>
-          </div>
-          <div className="column is-half-tablet is-one-third-desktop">
-            <Link
-              href={"/champions?elo=platplus"}
-              as={"/champions/platplus"}
-              scroll={false}
-            >
-              <a>
-                <div className="card border-radius-6 transition-up">
-                  <div className="card-image">
-                    <figure className="image is-2by1">
-                      <img
-                        className="border-radius-6"
-                        src="/static/images/home-page/champs-page.png"
-                        alt="chams list page"
-                      />
-                    </figure>
-                  </div>
-                  <div className="card-content pd-12">
-                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                      Champions List
-                    </h2>
-                    <p className="subtitle is-6 is-size-7-mobile">
-                      Champs List With Their Currently Played Roles For Each
-                      Elo.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </Link>
-          </div>
-          <div className="column is-half-tablet is-one-third-desktop">
-            <Link
-              href={"/champion?elo=platplus&champName=zed&role=middle"}
-              as={"/champions/platplus/zed/middle"}
-              scroll={false}
-            >
-              <a>
-                <div className="card border-radius-6 transition-up">
-                  <div className="card-image">
-                    <figure className="image is-2by1">
-                      <img
-                        className="border-radius-6"
-                        src="/static/images/home-page/champ-page.png"
-                        alt="champs analytics page"
-                      />
-                    </figure>
-                  </div>
-                  <div className="card-content pd-12">
-                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                      Champion Analytics
-                    </h2>
-                    <p className="subtitle is-6 is-size-7-mobile">
-                      Win Rate, Best Build, Best Runes, Matchups And More!
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </Link>
-          </div>
-          <div className="column is-half-tablet is-one-third-desktop">
-            <Link
-              href={
-                "/statistics?elo=platplus&sortBy=winRate&order=descend&roleFilter=all"
-              }
-              as={
-                "/statistics/platplus?sortBy=winRate&order=descend&roleFilter=all"
-              }
-              scroll={false}
-            >
-              <a>
-                <div className="card border-radius-6 transition-up">
-                  <div className="card-image">
-                    <figure className="image is-2by1">
-                      <img
-                        className="border-radius-6"
-                        src="/static/images/home-page/stats-page.png"
-                        alt="statistics page"
-                      />
-                    </figure>
-                  </div>
-                  <div className="card-content pd-12">
-                    <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                      Champions Statistics
-                    </h2>
-                    <p className="subtitle is-6 is-size-7-mobile">
-                      Sortable And Filterable Data Table Comparing All Champs
-                      Stats.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </Link>
-          </div>
-          <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/pref.png"
-                    alt="preferences modal"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                  Set Preferences
-                </h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Set Your Prefered: Region, Summoner, Champ And Elo.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="column is-half-tablet is-one-third-desktop">
-            <div className="card border-radius-6 transition-up">
-              <div className="card-image">
-                <figure className="image is-2by1">
-                  <img
-                    className="border-radius-6"
-                    src="/static/images/home-page/data-saving.png"
-                    alt="stored tabs"
-                  />
-                </figure>
-              </div>
-              <div className="card-content pd-12">
-                <h2 className="title is-4 is-size-5-mobile has-text-primary">
-                  Data Saving And Speed
-                </h2>
-                <p className="subtitle is-6 is-size-7-mobile">
-                  Any Searched Summoners Or Champs Are Stored For Future Visits.
-                </p>
-              </div>
-            </div>
-          </div>
+          <Card
+            href="/summoner?region=kr&summonerName=hideonbush"
+            as="/summoner/kr/hideonbush"
+            src="summoner-page"
+            title="Match History"
+            subTitle="Summoner Match History, Ranks, Statistics and Details."
+          />
+          <Card
+            href="/champions?elo=platplus"
+            as="/champions/platplus"
+            src="champs-page"
+            title="Champions List"
+            subTitle=" Champs List With Their Currently Played Roles For Each Elo."
+          />
+          <Card
+            href="/champion?elo=platplus&champName=zed&role=middle"
+            as="/champions/platplus/zed/middle"
+            src="champ-page"
+            title="Champion Analytics"
+            subTitle="Win Rate, Best Build, Best Runes, Matchups And More!"
+          />
+          <Card
+            href="/statistics?elo=platplus&sortBy=winRate&order=descend&roleFilter=all"
+            as="/statistics/platplus?sortBy=winRate&order=descend&roleFilter=all"
+            src="stats-page"
+            title="Champions Statistics"
+            subTitle="Sortable And Filterable Data Table Comparing All Champs Stats."
+          />
+          <Card
+            src="pref"
+            title="Set Preferences"
+            subTitle="Set Your Prefered: Region, Summoner, Champ And Elo."
+          />
+          <Card
+            src="data-saving"
+            title="Data Saving And Speed"
+            subTitle="Any Searched Summoners Or Champs Are Stored For Future Visits."
+          />
         </div>
       </React.Fragment>
     );
