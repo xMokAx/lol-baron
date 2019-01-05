@@ -810,9 +810,9 @@ active {
   }
 
   .pref-button {
-    margin-left: calc(100% - 52px);
-    width: 40px;
-    height: 40px;
+    margin-left: calc(100% - 60px);
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -974,5 +974,11 @@ active {
 
   .overview-champ {
     width: 45px;
+  }
+
+  .pref-button {
+    margin-left: calc(100% - 52px);
+    width: 40px;
+    height: 40px;
   }
 }
