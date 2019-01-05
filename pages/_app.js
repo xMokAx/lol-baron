@@ -45,7 +45,10 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps, reduxStore, router } = this.props;
-
+    const { asPath } = router;
+    const pathName = asPath.includes("?")
+      ? asPath.substring(0, asPath.indexOf("?"))
+      : asPath;
     return (
       <Container>
         {pageProps.statusCode ? (
@@ -60,7 +63,7 @@ class MyApp extends App {
           <Head>
             <meta
               property="og:url"
-              content={`https://lolbaron.com${router.asPath}`}
+              content={`https://lolbaron.com${pathName}`}
             />
           </Head>
         )}

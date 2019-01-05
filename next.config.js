@@ -10,10 +10,16 @@ module.exports = withPlugins([
     withOffline,
     {
       workboxOpts: {
+        // Files matching against any of these patterns will be included in the precache manifest.
         globPatterns: ["static/**/*"],
+        // The base directory you wish to match globPatterns against, relative to the current working directory.
         globDirectory: ".",
+        // Whether or not the service worker should skip over the waiting lifecycle stage
         skipWaiting: true,
+        // Whether or not the service worker should start controlling any existing clients as soon as it activates.
         clientsClaim: true,
+        // A required list of JavaScript files that should be passed to importScripts() inside the generated service worker file.
+        importScripts: ["static/sw.js"],
         runtimeCaching: [
           {
             urlPattern: /(?:lolapi|ggapi)/,

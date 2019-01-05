@@ -29,24 +29,33 @@ class Home extends Component {
             content="https://lolbaron.com/static/favicon/og-wide-image.png"
           />
         </Head>
-        <section className="section">
-          <h1 className="title is-size-4-mobile has-text-warning">
-            First Time User ?
-          </h1>
-          <h2 className="is-size-5 is-size-6-mobile has-text-warning">
-            This Website Is A <strong>PWA (Progressive Web App)</strong> So:
+        <h1 className="title is-size-4-mobile has-text-warning">
+          First Time User ?
+        </h1>
+        <section className="section has-text-left">
+          <h2 className="is-size-4 is-size-5-mobile has-text-primary">
+            This Website Is A{" "}
+            <strong className="has-text-primary">
+              SP (Single Page) PWA (Progressive Web App)
+            </strong>{" "}
+            So:
           </h2>
-          <ul className="list is-size-7-mobile">
+          <ul className="list pdx-2">
             <li className="list-item">
               <p>
-                * It Works Offline (Any Page or Data You Browsed Before You Can
-                Browse Again Without Internet Connection But They may not be Up
-                To Date)
+                - It's Very Fast And Becomes Faster With Subsequent Visits And
+                Uses Much Less Data.
               </p>
             </li>
             <li className="list-item">
               <p>
-                * It Can Be Added To Home Screen To Work As A Native Mobile App.
+                - It Works Offline (Any Page You Visited You Can Visit Again
+                While Offline But The Data May Not Be Up To Date)
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                - It Can Be Added To Home Screen To Work As A Native Mobile App.
               </p>
             </li>
           </ul>

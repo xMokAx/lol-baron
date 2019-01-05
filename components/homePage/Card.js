@@ -22,7 +22,7 @@ function Card({ href, as, src, title, subTitle }) {
                 <h3 className="title is-4 is-size-5-mobile has-text-primary">
                   {title}
                 </h3>
-                <p className="subtitle is-6 is-size-7-mobile">{subTitle}</p>
+                <p className="subtitle is-6">{subTitle}</p>
               </div>
             </div>
           </a>
