@@ -935,10 +935,6 @@ active {
   .search-column {
     padding-left: 4px
   }
-
-  .search-button {
-    width: 36px
-  }
 }
 
 @media only screen and (max-width: 390px) {
@@ -980,5 +976,9 @@ active {
     margin-left: calc(100% - 52px);
     width: 40px;
     height: 40px;
+  }
+
+  .search-button {
+    width: 36px
   }
 }
