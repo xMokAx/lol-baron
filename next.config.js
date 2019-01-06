@@ -9,6 +9,8 @@ module.exports = withPlugins([
   [
     withOffline,
     {
+      // to generate the service worker in development
+      generateInDevMode: true,
       workboxOpts: {
         // Files matching against any of these patterns will be included in the precache manifest.
         globPatterns: ["static/**/*"],
