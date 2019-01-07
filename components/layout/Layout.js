@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 
 import { fetchChamp, selectRole } from "../../actions/ggActions";
 import { fetchSummoner } from "../../actions/lolActions";
@@ -72,10 +71,19 @@ class Layout extends Component {
 
     // to show the online message when the user is back online
     window.addEventListener("online", e => {
-      this.setState({
-        online: true,
-        showConnectionStatus: true
-      });
+      this.setState(
+        {
+          online: true,
+          showConnectionStatus: true
+        },
+        () => {
+          setTimeout(() => {
+            this.setState({
+              showConnectionStatus: false
+            });
+          }, 1500);
+        }
+      );
     });
   }
 
@@ -105,20 +113,10 @@ class Layout extends Component {
     }
   };
 
-  handleCloseNotification = () => {
-    this.setState({
-      showConnectionStatus: false
-    });
-  };
-
-  handlePageReload = () => {
-    window.location.reload();
-  };
-
   render() {
     const { children } = this.props;
     const { isModalActive, online, showConnectionStatus } = this.state;
-    const { handleOpenModal, handleCloseNotification, handlePageReload } = this;
+    const { handleOpenModal } = this;
 
     return (
       <div className="hero is-fullheight container has-background-dark">
@@ -149,51 +147,14 @@ class Layout extends Component {
             }
           }}
         />
-        {showConnectionStatus ? (
+        {showConnectionStatus && (
           <div
-            className={classNames(
-              "message connection-notification is-size-7-mobile is-size-6-7 is-size-6-desktop",
-              online ? "is-success" : "is-danger"
-            )}
+            className="connection-notification"
+            style={{ backgroundColor: online ? "green" : "red" }}
           >
-            <div className="message-header">
-              {online ? (
-                <strong>Reconnected</strong>
-              ) : (
-                <strong>Connection Lost</strong>
-              )}
-              <button
-                className="delete"
-                aria-label="close notification"
-                onClick={handleCloseNotification}
-              />
-            </div>
-            <div className="message-body is-flex flex-vertical">
-              {online ? (
-                <span className={classNames(online && "mgr-s")}>
-                  You Are back <strong>ONLINE</strong>. Reload The Page To Get
-                  The Latest Data.
-                </span>
-              ) : (
-                <span className={classNames(online && "mgr-s")}>
-                  You Are <strong>OFFLINE</strong>. This App Works Offline But
-                  The Data May Not Be Up To Date.
-                </span>
-              )}
-              {online && (
-                <button
-                  className="button is-success is-small mgy-s"
-                  onClick={handlePageReload}
-                >
-                  <span className="icon">
-                    <i className="material-icons md-24">refresh</i>
-                  </span>
-                  <span>Reload</span>
-                </button>
-              )}
-            </div>
+            <p>{online ? "Back Online" : "No Internet Connection"}</p>
           </div>
-        ) : null}
+        )}
       </div>
     );
   }

@@ -25,7 +25,6 @@
     "http-proxy-middleware": "^0.18.0",
     "jsonwebtoken": "^8.4.0",
     "next": "7.0.2",
-    "next-ga": "^2.3.4",
     "re-reselect": "^2.1.0",
     "react": "^16.4.2",
     "react-autocomplete": "^1.8.1",

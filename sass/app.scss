@@ -26,20 +26,29 @@ html {
   margin-left: calc(100% - 68px);
   height: 56px;
   width: 56px;
-  box-shadow: 0 0 3px 3px rgba($black, 0.5);
+  box-shadow: 0 0 3px 3px rgba($black, 0.6);
   z-index: 2;
 }
 
-// connection-notification
-.connection-notification {
+push-notification .push-notification {
   width: 70%;
   max-width: 320px;
   position: fixed;
   bottom: 12px;
   left: 12px;
-  box-shadow: 0 0 3px 3px rgba($black, 0.5);
+  box-shadow: 0 0 3px 3px rgba($black, 0.6);
   // higher z-index than the modal
   z-index: 41;
+}
+
+// connection-notification
+.connection-notification {
+  height: 32px;
+  padding-top: 4px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 // loader
@@ -361,10 +370,6 @@ active {
 }
 
 // colors
-.has-background-primary-dark {
-  background-color: #00826e !important; // #006855
-}
-
 .has-text-danger-dark {
   color: #680014 !important;
 }
@@ -813,6 +818,11 @@ active {
     margin-left: calc(100% - 60px);
     width: 48px;
     height: 48px;
+  }
+
+  .connection-notification {
+    height: 24px;
+    padding-top: 0;
   }
 }
 

@@ -10,7 +10,7 @@ module.exports = withPlugins([
     withOffline,
     {
       // to generate the service worker in development
-      generateInDevMode: true,
+      // generateInDevMode: true,
       workboxOpts: {
         // Files matching against any of these patterns will be included in the precache manifest.
         globPatterns: ["static/**/*"],
@@ -24,26 +24,10 @@ module.exports = withPlugins([
         importScripts: ["static/sw.js"],
         runtimeCaching: [
           {
-            urlPattern: /(?:lolapi|ggapi)/,
+            urlPattern: "/",
             handler: "networkFirst",
             options: {
-              cacheName: "lol-gg-api",
-              cacheableResponse: {
-                statuses: [0, 200]
-              },
-              expiration: {
-                maxAgeSeconds: 60 * 60 * 24 * 30
-              },
-              matchOptions: {
-                ignoreSearch: true
-              }
-            }
-          },
-          {
-            urlPattern: /(https:\/\/lolbaron.com\/)|((\/)(champions|champion|overview|statistics)(\/)(platplus|platinum|gold|silver|bronze))|((\/summoner\/)(eune|euwest|na|ru|br|kr|jp|tr|lan|las|oce|pbe))/gi,
-            handler: "networkFirst",
-            options: {
-              cacheName: "html-pages",
+              cacheName: "html-cache",
               networkTimeoutSeconds: 6,
               cacheableResponse: {
                 statuses: [0, 200]
@@ -57,11 +41,44 @@ module.exports = withPlugins([
             }
           },
           {
-            // must match the full url if it's not the same origin
-            urlPattern: /^https:\/\/ddragon\.leagueoflegends\.com/,
+            urlPattern: /((\/)(champions|champion|overview|statistics)(\/)(platplus|platinum|gold|silver|bronze))|((\/summoner\/)(eune|euwest|na|ru|br|kr|jp|tr|lan|las|oce|pbe))/,
+            handler: "networkFirst",
+            options: {
+              cacheName: "html-cache",
+              networkTimeoutSeconds: 6,
+              cacheableResponse: {
+                statuses: [0, 200]
+              },
+              expiration: {
+                maxAgeSeconds: 60 * 60 * 24 * 30
+              },
+              matchOptions: {
+                ignoreSearch: true
+              }
+            }
+          },
+          {
+            urlPattern: /(?:lolapi|ggapi)/,
+            handler: "networkFirst",
+            options: {
+              cacheName: "lol-gg-api",
+              networkTimeoutSeconds: 6,
+              cacheableResponse: {
+                statuses: [0, 200]
+              },
+              expiration: {
+                maxAgeSeconds: 60 * 60 * 24 * 30
+              },
+              matchOptions: {
+                ignoreSearch: true
+              }
+            }
+          },
+          {
+            urlPattern: /^((?!static).)*\.(?:png|jpg|jpeg|svg|gif)$/,
             handler: "cacheFirst",
             options: {
-              cacheName: "ddragon-images",
+              cacheName: "image-cache",
               cacheableResponse: {
                 statuses: [0, 200]
               },
