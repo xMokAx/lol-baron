@@ -10,7 +10,7 @@ module.exports = withPlugins([
     withOffline,
     {
       // to generate the service worker in development
-      // generateInDevMode: true,
+      generateInDevMode: true,
       workboxOpts: {
         // Files matching against any of these patterns will be included in the precache manifest.
         globPatterns: ["static/**/*"],
@@ -21,7 +21,7 @@ module.exports = withPlugins([
         // Whether or not the service worker should start controlling any existing clients as soon as it activates.
         clientsClaim: true,
         // A required list of JavaScript files that should be passed to importScripts() inside the generated service worker file.
-        importScripts: ["static/sw.js"],
+        importScripts: ["sw.js"],
         runtimeCaching: [
           {
             urlPattern: "/",

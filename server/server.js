@@ -314,18 +314,23 @@ app
       app.render(req, res, actualPage, queryParams);
     });
 
-    server.get("/service-worker.js", (req, res) => {
-      const filePath = join(__dirname, "../", ".next", "service-worker.js");
-      res.set("Cache-Control", "no-cache");
-      app.serveStatic(req, res, filePath);
-    });
-
     if (isProd) {
       server.get(/^\/_next\/static\/css\//, (_req, res, next) => {
         res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
         next();
       });
     }
+
+    server.get("/service-worker.js", (_req, res) => {
+      const filePath = join(__dirname, "../", ".next", "service-worker.js");
+      res.set("Cache-Control", "no-cache");
+      return res.sendFile(filePath);
+    });
+
+    server.get("/sw.js", (_req, res) => {
+      const filePath = join(__dirname, "../", "sw.js");
+      return res.sendFile(filePath);
+    });
 
     server.use(
       "/static",
