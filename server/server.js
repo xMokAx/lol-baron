@@ -339,7 +339,7 @@ app
       return handle(req, res);
     });
 
-    server.use((err, req, res, next) => {
+    server.use((err, req, res, _next) => {
       // if there is an error caused by bad url
       if (err instanceof URIError) {
         // set error message
