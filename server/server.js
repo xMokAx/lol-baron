@@ -51,20 +51,21 @@ const roleFilters = ["all", "top", "middle", "jungle", "adc", "support"];
 
 const orderFilters = ["descend", "ascend"];
 
-//  an object with the urls to be proxied
-const proxy =
-  process.env.NODE_ENV !== "production"
-    ? {
-        "/lolapi": {
-          target: "http://localhost:5000/"
-        },
-        "/ggapi": {
-          target: "http://localhost:5000/"
-        }
-      }
-    : null;
-
+const isProd = process.env.NODE_ENV === "production";
 const dev = process.env.NODE_ENV !== "production";
+
+//  an object with the urls to be proxied
+const proxy = dev
+  ? {
+      "/lolapi": {
+        target: "http://localhost:5000/"
+      },
+      "/ggapi": {
+        target: "http://localhost:5000/"
+      }
+    }
+  : null;
+
 // pass dev === true to next
 const app = next({
   dev
@@ -318,6 +319,21 @@ app
       res.set("Cache-Control", "no-cache");
       app.serveStatic(req, res, filePath);
     });
+
+    if (isProd) {
+      server.get(/^\/_next\/static\/css\//, (_req, res, next) => {
+        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+        next();
+      });
+    }
+
+    server.use(
+      "/static",
+      express.static(join(__dirname, "../", "static"), {
+        maxAge: "365d",
+        immutable: true
+      })
+    );
 
     server.get("*", (req, res) => {
       return handle(req, res);
