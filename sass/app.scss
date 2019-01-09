@@ -19,6 +19,15 @@ html {
   overflow-x: auto;
 }
 
+// error page divider
+.divider {
+  display: inline-block;
+  text-align: left;
+  line-height: 49px;
+  height: 49px;
+  vertical-align: middle;
+}
+
 // pref-button
 .pref-button {
   position: sticky;

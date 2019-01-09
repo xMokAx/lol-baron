@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-WKT56Z3');`
             }}
-          /> */}
+          />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
@@ -60,7 +60,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#b86bff" />
         </Head>
         <body>
-          {/* <noscript>
+          <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-WKT56Z3"
               height="0"
@@ -70,7 +70,7 @@ export default class MyDocument extends Document {
                 visibility: "hidden"
               }}
             />
-          </noscript> */}
+          </noscript>
           <Main />
           <NextScript />
         </body>

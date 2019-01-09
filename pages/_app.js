@@ -1,9 +1,10 @@
 import React from "react";
 import App, { Container } from "next/app";
-import ErrorPage from "next/error";
 import Head from "next/head";
 import { withRouter } from "next/router";
 import { Provider } from "react-redux";
+
+import ErrorPage from "./_error";
 
 import withReduxStore from "../lib/with-redux-store";
 import "../sass/styles.scss";

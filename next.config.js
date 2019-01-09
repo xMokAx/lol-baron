@@ -29,11 +29,11 @@ module.exports = withPlugins([
     {
       // generate service worker in dev mode
       // generateInDevMode: true,
-      // Files matching against any of these patterns will be included in the precache manifest.
-      // globePatterns: "/static/**/*",
-      // The base directory you wish to match globPatterns against, relative to the current working directory.
-      // globeDirectory: "/.next",
       workboxOpts: {
+        // Files matching against any of these patterns will be included in the precache manifest.
+        globPatterns: ["static/site.webmanifest", "static/browserconfig.xml"],
+        // The base directory you wish to match globPatterns against, relative to the current working directory.
+        globDirectory: ".",
         // Whether or not the service worker should skip over the waiting lifecycle stage
         skipWaiting: true,
         // Whether or not the service worker should start controlling any existing clients as soon as it activates.
@@ -46,7 +46,7 @@ module.exports = withPlugins([
             handler: "networkFirst",
             options: {
               cacheName: "html-cache",
-              networkTimeoutSeconds: 6,
+              networkTimeoutSeconds: 10,
               cacheableResponse: {
                 statuses: [0, 200]
               },
@@ -63,7 +63,7 @@ module.exports = withPlugins([
             handler: "networkFirst",
             options: {
               cacheName: "html-cache",
-              networkTimeoutSeconds: 6,
+              networkTimeoutSeconds: 10,
               cacheableResponse: {
                 statuses: [0, 200]
               },
@@ -80,7 +80,7 @@ module.exports = withPlugins([
             handler: "networkFirst",
             options: {
               cacheName: "lol-gg-api",
-              networkTimeoutSeconds: 6,
+              networkTimeoutSeconds: 8,
               cacheableResponse: {
                 statuses: [0, 200]
               },
@@ -118,19 +118,6 @@ module.exports = withPlugins([
             handler: "cacheFirst",
             options: {
               cacheName: "google-fonts-webfonts",
-              cacheableResponse: {
-                statuses: [0, 200]
-              },
-              expiration: {
-                maxAgeSeconds: 60 * 60 * 24 * 365
-              }
-            }
-          },
-          {
-            urlPattern: /\/(?:site.webmanifest|browserconfig.xml)$/,
-            handler: "cacheFirst",
-            options: {
-              cacheName: "pwa-cache",
               cacheableResponse: {
                 statuses: [0, 200]
               },
