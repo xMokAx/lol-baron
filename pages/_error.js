@@ -24,7 +24,7 @@ export default class Error extends React.Component {
           </title>
         </Head>
         <div className="is-flex flex-vertical flex-align-center">
-          <figure className="image is-128x128 mg-1">
+          <figure className="image is-128x128 mgb-1">
             <img
               src="/static/images/error-baron.png"
               alt="baron icon"
