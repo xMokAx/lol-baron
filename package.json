@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./server/server.js --watch ./server/server.js",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server yarn build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser yarn build",
+    "analyze:both": "cross-env BUNDLE_ANALYZE=both yarn build",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node ./server/server.js",
     "restart": "pm2 startOrRestart ecosystem.config.js",
@@ -45,6 +48,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "^9.4.2",
     "cssnano": "^4.1.7",
