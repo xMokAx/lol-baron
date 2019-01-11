@@ -252,14 +252,24 @@ const fetchSummonerMatches = (
       }
     })
     .catch(error => {
-      if (error.response && error.response.status === 422) {
-        dispatch(
-          errorSummonerMatches(
-            region,
-            summonerName,
-            "No Matches Are Recorded. Summoner didn't play any matches recently"
-          )
-        );
+      if (error.response) {
+        if (error.response.status === 422) {
+          dispatch(
+            errorSummonerMatches(
+              region,
+              summonerName,
+              "No Matches Are Recorded. Summoner didn't play any matches recently"
+            )
+          );
+        } else if (error.response.status === 404) {
+          dispatch(
+            errorSummonerMatches(
+              region,
+              summonerName,
+              "No Matches Are Found For This Summoner"
+            )
+          );
+        }
       } else {
         dispatch(
           errorSummonerMatches(
