@@ -119,8 +119,7 @@ class ChampsAutoComplete extends Component {
         {champsListError && (
           <div className="help is-danger">
             <span className="mgr-s">
-              Please check your connection and retry to fetch champions list to
-              allow champions search
+              Can't Fetch Champions List Retry to allow champions search
             </span>
             <button
               className="button is-danger is-small"

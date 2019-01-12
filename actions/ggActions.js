@@ -238,16 +238,28 @@ export const fetchGeneral = () => (dispatch, getState, { axiosGg }) => {
     .then(response => {
       dispatch(receiveGeneral(elo, response));
     })
-    .catch(_error => {
+    .catch(error => {
       // return a promise so getInitialProps await for it if we are on server
-      return Promise.resolve(
-        dispatch(
-          errorGeneral(
-            elo,
-            "Can't Fetch General Site Info, Please Check Your Connection"
+      console.log(error);
+      if (error.response.status === 500) {
+        return Promise.resolve(
+          dispatch(
+            errorGeneral(
+              elo,
+              "Sorry, We Have A Problem Fetching General Data, Try Again Later."
+            )
           )
-        )
-      );
+        );
+      } else {
+        return Promise.resolve(
+          dispatch(
+            errorGeneral(
+              elo,
+              "Can't Fetch General Site Info, Please Check Your Connection"
+            )
+          )
+        );
+      }
     });
 };
 
@@ -263,15 +275,26 @@ export const fetchOverall = () => (dispatch, getState, { axiosGg }) => {
     .then(response => {
       dispatch(receiveOverall(elo, response));
     })
-    .catch(_error => {
-      return Promise.resolve(
-        dispatch(
-          errorOverall(
-            elo,
-            "Can't Fetch Champions Overall Performance Data, Please Check Your Connection"
+    .catch(error => {
+      if (error.response.status === 500) {
+        return Promise.resolve(
+          dispatch(
+            errorOverall(
+              elo,
+              "Sorry, We Have A Problem Fetching Champions Overall Performance Data, Try Again Later."
+            )
           )
-        )
-      );
+        );
+      } else {
+        return Promise.resolve(
+          dispatch(
+            errorOverall(
+              elo,
+              "Can't Fetch Champions Overall Performance Data, Please Check Your Connection."
+            )
+          )
+        );
+      }
     });
 };
 
@@ -287,15 +310,26 @@ export const fetchChampsList = () => (dispatch, getState, { axiosGg }) => {
     .then(response => {
       dispatch(receiveChampsList(elo, response));
     })
-    .catch(_error => {
-      return Promise.resolve(
-        dispatch(
-          errorChampsList(
-            elo,
-            "Can't Fetch Champions List, Please Check Your Connection"
+    .catch(error => {
+      if (error.response.status === 500) {
+        return Promise.resolve(
+          dispatch(
+            errorChampsList(
+              elo,
+              "Sorry, We Have A Problem Fetching Champions List, Try Again Later."
+            )
           )
-        )
-      );
+        );
+      } else {
+        return Promise.resolve(
+          dispatch(
+            errorChampsList(
+              elo,
+              "Can't Fetch Champions List, Please Check Your Connection."
+            )
+          )
+        );
+      }
     });
 };
 
@@ -311,15 +345,26 @@ export const fetchChampsData = () => (dispatch, getState, { axiosGg }) => {
     .then(response => {
       dispatch(receiveChampsData(elo, response));
     })
-    .catch(_error => {
-      return Promise.resolve(
-        dispatch(
-          errorChampsData(
-            elo,
-            "Can't Fetch Champions Data, Please Check Your Connection"
+    .catch(error => {
+      if (error.response.status === 500) {
+        return Promise.resolve(
+          dispatch(
+            errorChampsData(
+              elo,
+              "Sorry, We Can't Fetch Champions Data, Try Again Later."
+            )
           )
-        )
-      );
+        );
+      } else {
+        return Promise.resolve(
+          dispatch(
+            errorChampsData(
+              elo,
+              "Can't Fetch Champions Data, Please Check Your Connection."
+            )
+          )
+        );
+      }
     });
 };
 
@@ -341,16 +386,28 @@ export const fetchChamp = (elo, champName, id) => (
     .then(response => {
       dispatch(receiveChamp(elo, champName, response));
     })
-    .catch(_error => {
-      return Promise.resolve(
-        dispatch(
-          errorChamp(
-            elo,
-            champName,
-            "Can't Fetch Champion Data, Please Check Your Connection"
+    .catch(error => {
+      if (error.response.status === 500) {
+        return Promise.resolve(
+          dispatch(
+            errorChamp(
+              elo,
+              champName,
+              "Sorry, We Have A Problem Fetching Champion Data, Try Again Later."
+            )
           )
-        )
-      );
+        );
+      } else {
+        return Promise.resolve(
+          dispatch(
+            errorChamp(
+              elo,
+              champName,
+              "Can't Fetch Champion Data, Please Check Your Connection."
+            )
+          )
+        );
+      }
     });
 };
 
@@ -375,16 +432,29 @@ export const fetchMatchup = (champName, enemyName, champId, enemyId, role) => (
     .then(response => {
       dispatch(receiveMatchup(elo, champName, enemyName, response));
     })
-    .catch(_error => {
-      return Promise.resolve(
-        dispatch(
-          errorMatchup(
-            elo,
-            champName,
-            enemyName,
-            "Can't Fetch Matchup Stats, Please Check Your Connection"
+    .catch(error => {
+      if (error.response.status === 500) {
+        return Promise.resolve(
+          dispatch(
+            errorMatchup(
+              elo,
+              champName,
+              enemyName,
+              "Sorry, We Have A Problem Fetching Matchup Data, Try Again Later."
+            )
           )
-        )
-      );
+        );
+      } else {
+        return Promise.resolve(
+          dispatch(
+            errorMatchup(
+              elo,
+              champName,
+              enemyName,
+              "Can't Fetch Matchup Data, Please Check Your Connection."
+            )
+          )
+        );
+      }
     });
 };
