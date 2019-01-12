@@ -45,13 +45,10 @@ module.exports = withPlugins([
             urlPattern: "/",
             handler: "networkFirst",
             options: {
-              cacheName: "html-cache",
+              cacheName: "home-page",
               networkTimeoutSeconds: 10,
               cacheableResponse: {
                 statuses: [0, 200]
-              },
-              expiration: {
-                maxAgeSeconds: 60 * 60 * 24 * 30
               },
               matchOptions: {
                 ignoreSearch: true
@@ -68,7 +65,8 @@ module.exports = withPlugins([
                 statuses: [0, 200]
               },
               expiration: {
-                maxAgeSeconds: 60 * 60 * 24 * 30
+                maxEntries: 5,
+                maxAgeSeconds: 60 * 60 * 24 * 15
               },
               matchOptions: {
                 ignoreSearch: true
@@ -85,6 +83,7 @@ module.exports = withPlugins([
                 statuses: [0, 200]
               },
               expiration: {
+                maxEntries: 30,
                 maxAgeSeconds: 60 * 60 * 24 * 30
               },
               matchOptions: {
@@ -128,9 +127,12 @@ module.exports = withPlugins([
           },
           {
             urlPattern: /^https:\/\/www\.googletagmanager\.com/,
-            handler: "staleWhileRevalidate",
+            handler: "networkFirst",
             options: {
-              cacheName: "gtm-cache"
+              cacheName: "gtm-cache",
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
             }
           }
         ]
