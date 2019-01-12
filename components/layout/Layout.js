@@ -21,15 +21,6 @@ class Layout extends Component {
   };
 
   componentDidMount() {
-    if (!document.documentElement.classList.contains("wf-active")) {
-      import("webfontloader").then(WebFont =>
-        WebFont.load({
-          google: {
-            families: ["Lato:400", "Sura:700", "Material Icons"]
-          }
-        })
-      );
-    }
     if (window.localStorage.getItem("pref")) {
       const { prefChamp, prefSummoner, prefElo, prefRegion } = JSON.parse(
         window.localStorage.getItem("pref")

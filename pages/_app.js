@@ -23,6 +23,16 @@ class MyApp extends App {
     return { pageProps };
   }
   componentDidMount() {
+    if (!document.documentElement.classList.contains("wf-active")) {
+      import("webfontloader").then(WebFont =>
+        WebFont.load({
+          google: {
+            families: ["Lato:400", "Sura:700", "Material Icons"]
+          }
+        })
+      );
+    }
+
     const { reduxStore } = this.props;
     const { dispatch, getState, subscribe } = reduxStore;
 
@@ -79,5 +89,5 @@ class MyApp extends App {
     );
   }
 }
-// UA-131564404-1
+
 export default withRouter(withReduxStore(MyApp));

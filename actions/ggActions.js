@@ -240,7 +240,6 @@ export const fetchGeneral = () => (dispatch, getState, { axiosGg }) => {
     })
     .catch(error => {
       // return a promise so getInitialProps await for it if we are on server
-      console.log(error);
       if (error.response.status === 500) {
         return Promise.resolve(
           dispatch(
