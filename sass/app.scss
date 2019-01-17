@@ -36,10 +36,11 @@ html {
   height: 56px;
   width: 56px;
   box-shadow: 0 0 3px 3px rgba($black, 0.6);
-  z-index: 2;
+  z-index: 999;
 }
 
-push-notification .push-notification {
+// push-notification
+.push-notification {
   width: 70%;
   max-width: 320px;
   position: fixed;
@@ -58,6 +59,7 @@ push-notification .push-notification {
   bottom: 0;
   width: 100%;
   text-align: center;
+  z-index: 998;
 }
 
 // loader

@@ -207,7 +207,7 @@ function MatchDetailsItem({
           {kills}/{deaths}/{assists}
         </p>
         <p>
-          {kda}
+          {kda}{" "}
           <Tippy
             theme="translucent"
             arrow={true}

@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="content has-text-centered">
         <p>
-          <a href="/">
+          <a href="https://lolbaron.com">
             <strong>lolbaron.com</strong>
           </a>{" "}
           created by <a href="https://github.com/xMokAx">Ahmed Mokhtar</a>.
