@@ -36,7 +36,7 @@ class Home extends Component {
           <h2 className="is-size-4 is-size-5-mobile has-text-primary">
             This Website Is A{" "}
             <strong className="has-text-primary">
-              SP (Single Page) PWA (Progressive Web App)
+              Single Page Progressive Web App
             </strong>{" "}
             So:
           </h2>
