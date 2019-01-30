@@ -175,7 +175,7 @@ const ChampCharts = ({ roleData, champName }) => {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-      <div className="column is-12-mobile is-6-tablet is-6-desktop has-border-right">
+      <div className="column is-12-mobile is-6-tablet is-6-desktop">
         <TitleMain title="Win Rate % by Games Played" />
         {winsByMatchesPlayedData.length ? (
           <ResponsiveContainer height={200}>

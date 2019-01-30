@@ -128,6 +128,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
   return (
     <React.Fragment>
       <MatchupsList
+        className="has-border-right"
         matchups={strongAgainst}
         champName={champName}
         title={`${matchupRole} Champions That ${champName} Counters`}
@@ -169,6 +170,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
       </MatchupsList>
       {duoStrongAgainst && (
         <MatchupsList
+          className="has-border-right"
           matchups={duoStrongAgainst}
           champName={champName}
           title={`${duoMatchupRole} Champions That ${champName} Counters`}
@@ -183,6 +185,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
       )}
       {duoGoodSynergy && (
         <MatchupsList
+          className="has-border-right"
           matchups={duoGoodSynergy}
           champName={champName}
           title={`${duoMatchupRole} Champions That Synergize Well With ${champName}`}

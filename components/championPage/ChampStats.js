@@ -100,7 +100,7 @@ const ChampStats = ({ champName, roleData }) => {
 
   const role = ggRoles[roleData.role];
   return (
-    <div className="column is-12-mobile is-9-tablet is-8-desktop has-border-right">
+    <div className="column is-12-mobile is-9-tablet is-8-desktop">
       <TitleMain title="Statistics" />
       <table className="table is-striped is-fullwidth has-text-weight-semibold is-size-7-mobile is-size-6-7 is-size-6-desktop">
         <thead>
