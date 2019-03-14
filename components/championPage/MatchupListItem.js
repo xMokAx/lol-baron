@@ -27,7 +27,7 @@ class MatchupListItem extends Component {
   };
 
   render() {
-    const { selectedElo, matchup, champ, enemy } = this.props;
+    const { selectedElo, matchup, champ, enemy, type } = this.props;
     const { isDetailsOpened } = this.state;
     const { champData, enemyData, count } = matchup;
     const role = ggRoles[champData.role];
@@ -172,6 +172,7 @@ class MatchupListItem extends Component {
             enemy={enemy}
             enemyName={enemyName}
             champName={champName}
+            type={type}
           />
         )}
       </React.Fragment>

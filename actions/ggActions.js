@@ -240,7 +240,7 @@ export const fetchGeneral = () => (dispatch, getState, { axiosGg }) => {
     })
     .catch(error => {
       // return a promise so getInitialProps await for it if we are on server
-      if (error.response.status === 500) {
+      if (error.response && error.response.status === 500) {
         return Promise.resolve(
           dispatch(
             errorGeneral(
@@ -275,7 +275,7 @@ export const fetchOverall = () => (dispatch, getState, { axiosGg }) => {
       dispatch(receiveOverall(elo, response));
     })
     .catch(error => {
-      if (error.response.status === 500) {
+      if (error.response && error.response.status === 500) {
         return Promise.resolve(
           dispatch(
             errorOverall(
@@ -310,7 +310,7 @@ export const fetchChampsList = () => (dispatch, getState, { axiosGg }) => {
       dispatch(receiveChampsList(elo, response));
     })
     .catch(error => {
-      if (error.response.status === 500) {
+      if (error.response && error.response.status === 500) {
         return Promise.resolve(
           dispatch(
             errorChampsList(
@@ -345,7 +345,7 @@ export const fetchChampsData = () => (dispatch, getState, { axiosGg }) => {
       dispatch(receiveChampsData(elo, response));
     })
     .catch(error => {
-      if (error.response.status === 500) {
+      if (error.response && error.response.status === 500) {
         return Promise.resolve(
           dispatch(
             errorChampsData(
@@ -386,7 +386,7 @@ export const fetchChamp = (elo, champName, id) => (
       dispatch(receiveChamp(elo, champName, response));
     })
     .catch(error => {
-      if (error.response.status === 500) {
+      if (error.response && error.response.status === 500) {
         return Promise.resolve(
           dispatch(
             errorChamp(
@@ -432,7 +432,7 @@ export const fetchMatchup = (champName, enemyName, champId, enemyId, role) => (
       dispatch(receiveMatchup(elo, champName, enemyName, response));
     })
     .catch(error => {
-      if (error.response.status === 500) {
+      if (error.response && error.response.status === 500) {
         return Promise.resolve(
           dispatch(
             errorMatchup(

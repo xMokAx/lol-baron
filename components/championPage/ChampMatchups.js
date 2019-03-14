@@ -174,6 +174,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
           matchups={duoStrongAgainst}
           champName={champName}
           title={`${duoMatchupRole} Champions That ${champName} Counters`}
+          type={"ADCSUPPORT"}
         />
       )}
       {duoWeakAgainst && (
@@ -181,6 +182,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
           champName={champName}
           matchups={duoWeakAgainst}
           title={`${duoMatchupRole} Champions That Counter ${champName}`}
+          type={"ADCSUPPORT"}
         />
       )}
       {duoGoodSynergy && (
@@ -189,6 +191,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
           matchups={duoGoodSynergy}
           champName={champName}
           title={`${duoMatchupRole} Champions That Synergize Well With ${champName}`}
+          type={"SYNERGY"}
         />
       )}
       {duoBadSynergy && (
@@ -196,6 +199,7 @@ const ChampMatchups = ({ roleData, champName, champId }) => {
           champName={champName}
           matchups={duoBadSynergy}
           title={`${duoMatchupRole} Champions That Synergize Poorly With ${champName}`}
+          type={"SYNERGY"}
         />
       )}
     </React.Fragment>

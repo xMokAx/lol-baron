@@ -7,9 +7,17 @@ import MatchupTableRow from "./MatchupTableRow";
 import ChampImage from "../common/ChampImage";
 
 const MatchupTable = ({ matchupData, champ, enemy }) => {
-  const champion1 = matchupData.champion1.stats;
-  const champion2 = matchupData.champion2.stats;
-  const role = ggRoles[champion1.role];
+  console.log(matchupData)
+  let champion, opponent;
+  if (champ.id == matchupData.champion1.championId) {
+    champion = matchupData.champion1.stats;
+    opponent = matchupData.champion2.stats;
+  } else {
+    opponent = matchupData.champion1.stats;
+    champion = matchupData.champion2.stats;
+  }
+
+  const role = ggRoles[champion.role];
   return (
     <table className="table is-fullwidth is-striped is-size-6-7 is-size-7-mobile is-size-6-desktop">
       <thead>
@@ -43,64 +51,64 @@ const MatchupTable = ({ matchupData, champ, enemy }) => {
           role={role}
           sortByProp="winRate"
           type="Win Rate"
-          champAverage={champion1.winrate}
-          champChange={champion1.deltawinrate}
-          enemyAverage={champion2.winrate}
-          enemyChange={champion2.deltawinrate}
+          champAverage={champion.winrate}
+          champChange={champion.deltawinrate}
+          enemyAverage={opponent.winrate}
+          enemyChange={opponent.deltawinrate}
         />
         <MatchupTableRow
           role={role}
           sortByProp="goldEarned"
           type="Gold Earned"
-          champAverage={champion1.goldEarned}
-          champChange={champion1.deltagoldEarned}
-          enemyAverage={champion2.goldEarned}
-          enemyChange={champion2.deltagoldEarned}
+          champAverage={champion.goldEarned}
+          champChange={champion.deltagoldEarned}
+          enemyAverage={opponent.goldEarned}
+          enemyChange={opponent.deltagoldEarned}
         />
         <MatchupTableRow
           role={role}
           sortByProp="kills"
           type="Kills"
-          champAverage={champion1.kills}
-          champChange={champion1.deltakills}
-          enemyAverage={champion2.kills}
-          enemyChange={champion2.deltakills}
+          champAverage={champion.kills}
+          champChange={champion.deltakills}
+          enemyAverage={opponent.kills}
+          enemyChange={opponent.deltakills}
         />
         <MatchupTableRow
           role={role}
           sortByProp="assists"
           type="Assists"
-          champAverage={champion1.assists}
-          champChange={champion1.deltaassists}
-          enemyAverage={champion2.assists}
-          enemyChange={champion2.deltaassists}
+          champAverage={champion.assists}
+          champChange={champion.deltaassists}
+          enemyAverage={opponent.assists}
+          enemyChange={opponent.deltaassists}
         />
         <MatchupTableRow
           role={role}
           sortByProp="deaths"
           type="Deaths"
-          champAverage={champion1.deaths}
-          champChange={champion1.deltadeaths}
-          enemyAverage={champion2.deaths}
-          enemyChange={champion2.deltadeaths}
+          champAverage={champion.deaths}
+          champChange={champion.deltadeaths}
+          enemyAverage={opponent.deaths}
+          enemyChange={opponent.deltadeaths}
         />
         <MatchupTableRow
           role={role}
           sortByProp="damageComposition.total"
           type="Damage Dealt"
-          champAverage={champion1.totalDamageDealtToChampions}
-          champChange={champion1.deltatotalDamageDealtToChampions}
-          enemyAverage={champion2.totalDamageDealtToChampions}
-          enemyChange={champion2.deltatotalDamageDealtToChampions}
+          champAverage={champion.totalDamageDealtToChampions}
+          champChange={champion.deltatotalDamageDealtToChampions}
+          enemyAverage={opponent.totalDamageDealtToChampions}
+          enemyChange={opponent.deltatotalDamageDealtToChampions}
         />
         <MatchupTableRow
           role={role}
           sortByProp="minionsKilled"
           type="Minions Killed"
-          champAverage={champion1.minionsKilled}
-          champChange={champion1.deltaminionsKilled}
-          enemyAverage={champion2.minionsKilled}
-          enemyChange={champion2.deltaminionsKilled}
+          champAverage={champion.minionsKilled}
+          champChange={champion.deltaminionsKilled}
+          enemyAverage={opponent.minionsKilled}
+          enemyChange={opponent.deltaminionsKilled}
         />
       </tbody>
     </table>

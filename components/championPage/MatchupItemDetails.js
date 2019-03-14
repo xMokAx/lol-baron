@@ -38,9 +38,17 @@ class MatchupItemDetails extends Component {
       enemyName,
       champ,
       enemy,
-      champData
+      champData,
+      type
     } = this.props;
-    fetchMatchup(champName, enemyName, champ.id, enemy.id, champData.role);
+    console.log(type)
+    fetchMatchup(
+      champName,
+      enemyName,
+      champ.id,
+      enemy.id,
+      type || champData.role
+    );
   }
 
   handleMatchupRetry = () => {
@@ -50,9 +58,16 @@ class MatchupItemDetails extends Component {
       enemyName,
       champ,
       enemy,
-      champData
+      champData,
+      type
     } = this.props;
-    fetchMatchup(champName, enemyName, champ.id, enemy.id, champData.role);
+    fetchMatchup(
+      champName,
+      enemyName,
+      champ.id,
+      enemy.id,
+      type || champData.role
+    );
   };
 
   render() {

@@ -5,7 +5,7 @@ const MatchupTableChamp = ({ type, average, change }) => {
   switch (type) {
     case "Win Rate":
       average = (average * 100).toFixed(2) + "%";
-      change = change.toFixed(2);
+      change = (change * 100).toFixed(2);
       break;
     case "Gold Earned":
     case "Damage Dealt":
@@ -36,6 +36,7 @@ const MatchupTableChamp = ({ type, average, change }) => {
       <td className={changeColor}>
         {changeSign}
         {change}
+        {type === "Win Rate" && "%"}
       </td>
     </React.Fragment>
   );

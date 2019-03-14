@@ -10,7 +10,8 @@ export default class MatchupsList extends Component {
     title: PropTypes.string.isRequired,
     champName: PropTypes.string.isRequired,
     children: PropTypes.object,
-    className: PropTypes.string
+    className: PropTypes.string,
+    type: PropTypes.string
   };
 
   state = {
@@ -29,7 +30,14 @@ export default class MatchupsList extends Component {
   };
 
   render() {
-    const { matchups, title, champName, children, className = "" } = this.props;
+    const {
+      matchups,
+      title,
+      champName,
+      children,
+      className = "",
+      type
+    } = this.props;
     const { matchupsCount } = this.state;
     const { showMoreMatchups } = this;
     const shownMatchups = matchups.filter((_matchup, i) => i < matchupsCount);
@@ -51,7 +59,7 @@ export default class MatchupsList extends Component {
             </thead>
             <tbody>
               {shownMatchups.map((matchup, i) => (
-                <MatchupListItem key={i} matchup={matchup} />
+                <MatchupListItem key={i} matchup={matchup} type={type} />
               ))}
               {!isAllShown && (
                 <tr>
