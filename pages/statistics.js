@@ -40,6 +40,11 @@ class stats extends Component {
 
     const { dispatch } = reduxStore;
     let { elo, sortBy, order, roleFilter, search } = query;
+    if (!elo) {
+      return {
+        statusCode: 404
+      };
+    }
 
     dispatch(selectElo(elo));
     const orderBool = order === "descend" ? true : false;

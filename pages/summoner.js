@@ -26,6 +26,11 @@ class summoner extends Component {
     const isServer = !!req;
 
     let { region, summonerName } = query;
+    if (!region || !summonerName) {
+      return {
+        statusCode: 404
+      };
+    }
 
     reduxStore.dispatch(selectRegion(region));
     reduxStore.dispatch(selectSummoner(summonerName, region));

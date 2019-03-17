@@ -33,6 +33,11 @@ class champion extends Component {
     const isServer = !!req;
 
     let { elo, champName, role } = query;
+    if (!elo || !champName || !role) {
+      return {
+        statusCode: 404
+      };
+    }
     const { getState, dispatch } = reduxStore;
     const champs = getState().champs;
     const champion = await getValueByProp(

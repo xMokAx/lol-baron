@@ -19,6 +19,11 @@ class champions extends Component {
 
   static async getInitialProps({ reduxStore, req, query }) {
     let { elo } = query;
+    if (!elo) {
+      return {
+        statusCode: 404
+      };
+    }
 
     reduxStore.dispatch(selectElo(elo));
 

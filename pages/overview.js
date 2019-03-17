@@ -19,6 +19,11 @@ class overview extends Component {
     const isServer = !!req;
 
     let { elo } = query;
+    if (!elo) {
+      return {
+        statusCode: 404
+      };
+    }
 
     reduxStore.dispatch(selectElo(elo));
     if (isServer) {
