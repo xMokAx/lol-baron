@@ -27,7 +27,12 @@ class MyApp extends App {
       import("webfontloader").then(WebFont =>
         WebFont.load({
           google: {
-            families: ["Lato:400", "Sura:700", "Material Icons"]
+            families: [
+              "Open+Sans:400,600,700",
+              "Lato:400",
+              "Sura:700",
+              "Material Icons&display=swap"
+            ]
           }
         })
       );
