@@ -460,6 +460,7 @@ class Match extends Component {
                     region={region}
                     selectedElo={selectedElo}
                     champsList={champsList}
+                    champs={champs}
                   />
                   <MatchDetails
                     players={enemyTeamPlayers}
@@ -470,6 +471,7 @@ class Match extends Component {
                     region={region}
                     selectedElo={selectedElo}
                     champsList={champsList}
+                    champs={champs}
                   />
                 </tbody>
               </table>

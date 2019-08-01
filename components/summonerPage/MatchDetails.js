@@ -14,7 +14,8 @@ const MatchDetails = ({
   team,
   gameDuration,
   selectedElo,
-  champsList
+  champsList,
+  champs
 }) => {
   if (players.length) {
     let totalKills = 0,
@@ -117,10 +118,11 @@ const MatchDetails = ({
                 {bans.map(ban => {
                   const { championId, pickTurn } = ban;
                   if (championId !== -1) {
-                    const champ = champsList.find(
-                      champ => champ.id == championId
-                    );
-                    const role = champ ? ggRoles[champ.roles[0].role] : "";
+                    const champ =
+                      champsList.find(champ => champ.id == championId) ||
+                      champs[championId];
+                    const role =
+                      champ && champ.roles ? ggRoles[champ.roles[0].role] : "";
                     const champName = champ.gameName
                       .replace(/([^a-z]+)/gi, "")
                       .toLowerCase();
@@ -139,6 +141,15 @@ const MatchDetails = ({
                             />
                           </a>
                         </Link>
+                      );
+                    } else {
+                      return (
+                        <ChampImage
+                          key={pickTurn}
+                          tooltip={true}
+                          champId={championId}
+                          className="image is-40x40 mg-s"
+                        />
                       );
                     }
                   } else {
