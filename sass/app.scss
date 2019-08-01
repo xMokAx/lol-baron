@@ -90,11 +90,11 @@ html {
 }
 
 .page-loader-height {
-  height: 150px
+  height: 150px;
 }
 
 // rune tooltip
-.description>hr {
+.description > hr {
   margin-right: auto;
   margin-left: auto;
   width: 80%;
@@ -102,26 +102,26 @@ html {
   background-color: #dbdbdb;
 }
 
-.description-text>* {
-  color: #ffdd57
+.description-text > * {
+  color: #ffdd57;
 }
 
-.description-text>rules {
+.description-text > rules {
   color: #209cee;
 }
 
-.description>lol-uikit-tooltipped-keyword>font {
+.description > lol-uikit-tooltipped-keyword > font {
   color: #00d1b2;
 }
 
 // item tooltip
-.description>unique,
+.description > unique,
 passive,
 active {
   color: #ffdd57;
 }
 
-.description>stats {
+.description > stats {
   color: #209cee;
 }
 
@@ -188,7 +188,7 @@ active {
 }
 
 .pd-12 {
-  padding: 12px
+  padding: 12px;
 }
 
 .pd-2 {
@@ -499,7 +499,6 @@ active {
   z-index: 1;
 }
 
-
 // animation
 .transition-up {
   transition-duration: 86ms;
@@ -516,7 +515,6 @@ active {
   font-size: 10px;
 }
 
-
 // image sizes
 .image.is-20x20 {
   height: 20px;
@@ -531,6 +529,11 @@ active {
 .image.is-40x40 {
   height: 40px;
   width: 40px;
+}
+
+.image.is-28x28 {
+  height: 28px;
+  width: 28px;
 }
 
 // borders
@@ -573,7 +576,7 @@ active {
   background-color: rgba(0, 0, 0, 0.95);
   border: 1px solid #ab8f57;
   // background-image: linear-gradient(0deg, #6c5021 0, #ab8f57 100%);
-  text-align: left
+  text-align: left;
 }
 
 .tippy-tooltip.translucent-theme .tippy-content {
@@ -593,24 +596,32 @@ active {
   stroke: #ab8f57;
 }
 
-.tippy-popper[x-placement^=top] .tippy-tooltip.translucent-theme .tippy-roundarrow {
+.tippy-popper[x-placement^="top"]
+  .tippy-tooltip.translucent-theme
+  .tippy-roundarrow {
   bottom: -3px;
 }
 
-.tippy-popper[x-placement^=bottom] .tippy-tooltip.translucent-theme .tippy-roundarrow {
+.tippy-popper[x-placement^="bottom"]
+  .tippy-tooltip.translucent-theme
+  .tippy-roundarrow {
   top: -7px;
 }
 
-.tippy-popper[x-placement^=left] .tippy-tooltip.translucent-theme .tippy-roundarrow {
+.tippy-popper[x-placement^="left"]
+  .tippy-tooltip.translucent-theme
+  .tippy-roundarrow {
   right: -19px;
 }
 
-.tippy-popper[x-placement^=right] .tippy-tooltip.translucent-theme .tippy-roundarrow {
+.tippy-popper[x-placement^="right"]
+  .tippy-tooltip.translucent-theme
+  .tippy-roundarrow {
   left: -19px;
 }
 
 .tippy-tooltip.translucent-theme[data-animatefill] {
-  background-color: transparent
+  background-color: transparent;
 }
 
 // recharts tooltip
@@ -669,15 +680,15 @@ active {
 
 .badge.is-badge-small:not([data-badge=""])::after {
   padding: 0.2rem 0.2rem;
-  line-height: 8.8px
+  line-height: 8.8px;
 }
 
 .badge.is-badge-danger-dark[data-badge]::after {
-  background-color: #680014
+  background-color: #680014;
 }
 
 .badge.is-badge-info-dark[data-badge]::after {
-  background-color: #004068
+  background-color: #004068;
 }
 
 .summoner-items-width {
@@ -721,7 +732,7 @@ active {
 .selected-skill {
   position: relative;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 .selected-skill-text {
@@ -785,7 +796,7 @@ active {
 @media screen and (min-width: 769px) and (max-width: 1000px) {
   .progress-bar {
     width: 150px;
-    font-size: 10px !important
+    font-size: 10px !important;
   }
 
   .matchup-enemy {
@@ -950,11 +961,11 @@ active {
 
 @media only screen and (max-width: 400px) {
   .select-region-vs {
-    width: 80px
+    width: 80px;
   }
 
   .search-column {
-    padding-left: 4px
+    padding-left: 4px;
   }
 }
 
@@ -1000,6 +1011,6 @@ active {
   }
 
   .search-button {
-    width: 36px
+    width: 36px;
   }
 }

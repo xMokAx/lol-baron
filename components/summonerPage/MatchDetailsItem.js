@@ -287,7 +287,7 @@ function MatchDetailsItem({
       <td>
         {highestAchievedSeasonTier
           ? highestAchievedSeasonTier.toLowerCase()
-          : "Bot"}
+          : "___"}
       </td>
     </tr>
   );

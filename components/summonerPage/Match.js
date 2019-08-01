@@ -298,7 +298,7 @@ class Match extends Component {
                 {perk0 && (
                   <RuneImage
                     runeId={perk0}
-                    className="image is-32x32"
+                    className="image is-28x28"
                     imgStyle="is-rounded has-background-black"
                   />
                 )}
