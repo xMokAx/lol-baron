@@ -48,7 +48,7 @@ export function initializeStore(initialState, req) {
   const axiosGg = isServer
     ? axios.create({
         method: "get",
-        baseURL: "http://localhost:5000/ggapi",
+        baseURL: "http://ec2-18-197-176-168.eu-central-1.compute.amazonaws.com:5000/ggapi",
         headers: headers
       })
     : axios.create({
@@ -60,7 +60,7 @@ export function initializeStore(initialState, req) {
   const axiosLol = isServer
     ? axios.create({
         method: "get",
-        baseURL: "http://localhost:5000/lolapi",
+        baseURL: "http://ec2-18-197-176-168.eu-central-1.compute.amazonaws.com:5000/lolapi",
         headers: headers
       })
     : axios.create({
